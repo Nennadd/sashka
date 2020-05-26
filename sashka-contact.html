@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <script
+      src="https://kit.fontawesome.com/464a44f0d5.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        color: rgb(54, 2, 54);
+      }
+      body {
+        font-size: 16px;
+        font-family: Tahoma;
+        background-color: #eaebf3;
+        color: rgb(54, 2, 54);
+        margin: 0;
+        padding: 0;
+      }
+      .contact {
+        position: relative;
+        padding: 2rem 0;
+        height: 100vh;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.7rem;
+      }
+      form {
+        display: grid;
+        gap: 1rem;
+        width: 45%;
+        margin: 2rem auto;
+      }
+      .inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        margin-bottom: 0.6rem;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.8rem;
+        color: rgb(54, 2, 54);
+        border: none;
+        border-radius: 15px;
+        background-color: #eaebf3;
+        box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
+      }
+      input:focus,
+      textarea:focus {
+        box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
+        outline-style: none;
+      }
+      button {
+        display: block;
+        width: 40%;
+        padding: 0.6rem 0;
+        color: purple;
+        font-weight: bold;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        margin: 0.8rem auto;
+        border: none;
+        border-radius: 10px;
+        box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
+        cursor: pointer;
+      }
+      .btn1:active {
+        box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
+      }
+      .btn2 {
+        color: #fff;
+        /* background-image: linear-gradient(to right, purple, rgb(199, 135, 199)); */
+        background: purple;
+        box-shadow: -4px -4px 4px rgb(230, 180, 209), 4px 4px 4px rgb(82, 4, 65);
+      }
+      .btn2:active {
+        box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.4),
+          inset -5px -5px 5px rgb(155, 96, 155);
+      }
+      button:focus {
+        outline-style: none;
+      }
+      .left-box {
+        position: absolute;
+        top: 75%;
+        left: 1rem;
+        height: 3rem;
+        width: 20%;
+        background-color: rgba(128, 3, 128, 0.8);
+        animation: box-width 1.5s ease;
+        animation-fill-mode: backwards;
+        animation-delay: 0.5s;
+      }
+      .right-box {
+        position: absolute;
+        top: 10%;
+        right: 1rem;
+        height: 3rem;
+        width: 20%;
+        background-color: rgba(128, 3, 128, 0.7);
+        animation: box-width 1.5s ease;
+        animation-fill-mode: backwards;
+        animation-delay: 1.5s;
+      }
+      @keyframes box-width {
+        0% {
+          width: 0%;
+        }
+        50% {
+          width: 20%;
+        }
+        70% {
+          width: 18%;
+        }
+        100% {
+          width: 20%;
+        }
+      }
+      .icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+      .icon {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        margin: 0 20px;
+        /* padding: 20px; */
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa;
+      }
+      i {
+        display: inline-block;
+      }
+      .icon:hover {
+        box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="contact">
+      <div class="left-box"></div>
+      <div class="right-box"></div>
+      <h1>Contact Me</h1>
+      <form>
+        <div class="inputs">
+          <div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              autocomplete="off"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="email"
+              placeholder="Email address"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div>
+          <textarea
+            name="message"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+        </div>
+        <div style="display: flex;">
+          <button class="btn1">SEND</button>
+          <button class="btn2">SEND</button>
+        </div>
+        <div class="icons">
+          <div class="icon">
+            <a class="social-icons" href="#">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+          </div>
+          <div class="icon">
+            <a class="social-icons" href="#">
+              <i class="fab fa-facebook-f fa-2x"></i>
+            </a>
+          </div>
+          <div class="icon">
+            <a class="social-icons" href="#">
+              <i class="fab fa-linkedin-in fa-2x"></i>
+            </a>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      const button1 = document.querySelector(".btn1");
+      const button2 = document.querySelector(".btn2");
+      button1.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+      button2.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
