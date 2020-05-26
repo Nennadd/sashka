@@ -96,7 +96,7 @@
         height: 3rem;
         width: 20%;
         background-color: rgba(128, 3, 128, 0.8);
-        animation: box-width 1.5s ease;
+        animation: box-width 1s ease;
         animation-fill-mode: backwards;
         animation-delay: 0.5s;
       }
@@ -107,9 +107,9 @@
         height: 3rem;
         width: 20%;
         background-color: rgba(128, 3, 128, 0.7);
-        animation: box-width 1.5s ease;
+        animation: box-width 1s ease;
         animation-fill-mode: backwards;
-        animation-delay: 1.5s;
+        animation-delay: 1s;
       }
       @keyframes box-width {
         0% {
@@ -141,13 +141,13 @@
         align-items: center;
         /* box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa; */
         box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
-      }
-      i {
-        display: inline-block;
+        cursor: pointer;
+        transition: all 0.3s ease;
       }
       .icon:hover {
         /* box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff; */
         box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa;
+        font-size: 1.04rem;
       }
     </style>
   </head>
