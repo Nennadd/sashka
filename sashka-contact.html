@@ -9,15 +9,16 @@
       crossorigin="anonymous"
     ></script>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
       * {
         box-sizing: border-box;
         color: rgb(54, 2, 54);
       }
       body {
         font-size: 16px;
-        font-family: Tahoma;
+        font-family: "Poppins", sans-serif;
         background-color: #eaebf3;
-        color: rgb(54, 2, 54);
+        color: rgb(102, 7, 102);
         margin: 0;
         padding: 0;
       }
@@ -28,9 +29,10 @@
       }
       h1 {
         text-align: center;
-        margin-top: 1rem;
-        font-size: 1.7rem;
+        margin-top: 0.6rem;
+        /* font-size: 1.6rem; */
         color: purple;
+        word-spacing: 0.3rem;
       }
       form {
         display: grid;
@@ -47,24 +49,44 @@
       input,
       textarea {
         width: 100%;
-        padding: 0.8rem;
-        color: rgb(54, 2, 54);
+        padding: 0.8rem 0 0.8rem 2rem;
+        color: rgb(98, 7, 98);
         border: none;
         border-radius: 15px;
+        font-weight: 400;
         background-color: #eaebf3;
         box-shadow: -3px -3px 3px #fff, 3px 3px 3px #aaa;
+      }
+      textarea {
+        font-size: 0.96rem;
+        font-weight: 500;
       }
       input:focus,
       textarea:focus {
         box-shadow: inset 3px 3px 3px #aaa, inset -3px -3px 3px #fff;
         outline-style: none;
+        color: purple;
+      }
+      .form-control {
+        position: relative;
+      }
+      i {
+        color: rgb(102, 7, 102);
+      }
+      .input-icon {
+        position: absolute;
+        left: 0.5rem;
+        top: 0.8rem;
+      }
+      .textarea-box .input-icon {
+        top: 0.95rem;
       }
       button {
         display: block;
         width: 40%;
         padding: 0.6rem 0;
-        color: purple;
-        font-weight: bold;
+        color: rgb(102, 7, 102);
+        font-weight: 700;
         font-size: 1rem;
         letter-spacing: 2px;
         margin: 0.8rem auto;
@@ -73,18 +95,8 @@
         box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
         cursor: pointer;
       }
-      .btn1:active {
+      button:active {
         box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
-      }
-      .btn2 {
-        color: #fff;
-        /* background-image: linear-gradient(to right, purple, rgb(199, 135, 199)); */
-        background: purple;
-        box-shadow: -4px -4px 4px rgb(230, 180, 209), 4px 4px 4px rgb(82, 4, 65);
-      }
-      .btn2:active {
-        box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.4),
-          inset -5px -5px 5px rgb(155, 96, 155);
       }
       button:focus {
         outline-style: none;
@@ -128,7 +140,7 @@
       .icons {
         display: flex;
         justify-content: center;
-        margin-top: 3rem;
+        margin-top: 1rem;
       }
       .icon {
         display: flex;
@@ -155,10 +167,14 @@
     <section class="contact">
       <div class="left-box"></div>
       <div class="right-box"></div>
-      <h1>Contact Me</h1>
+      <h1>
+        Contact Me <i class="far fa-kiss-wink-heart"></i>
+        <!-- <i class="far fa-smile-wink"></i> -->
+      </h1>
       <form>
         <div class="inputs">
-          <div>
+          <div class="form-control">
+            <i class="input-icon fas fa-user"></i>
             <input
               type="text"
               name="name"
@@ -166,7 +182,8 @@
               autocomplete="off"
             />
           </div>
-          <div>
+          <div class="form-control">
+            <i class="input-icon fas fa-at"></i>
             <input
               type="text"
               name="email"
@@ -175,7 +192,8 @@
             />
           </div>
         </div>
-        <div>
+        <div class="form-control textarea-box">
+          <i class="input-icon fas fa-envelope"></i>
           <textarea
             name="message"
             id=""
@@ -185,8 +203,7 @@
           ></textarea>
         </div>
         <div style="display: flex;">
-          <button class="btn1">SEND</button>
-          <button class="btn2">SEND</button>
+          <button>SEND</button>
         </div>
         <div class="icons">
           <div class="icon">
@@ -209,12 +226,8 @@
     </section>
 
     <script>
-      const button1 = document.querySelector(".btn1");
-      const button2 = document.querySelector(".btn2");
-      button1.addEventListener("click", (e) => {
-        e.preventDefault();
-      });
-      button2.addEventListener("click", (e) => {
+      const button = document.querySelector("button");
+      button.addEventListener("click", (e) => {
         e.preventDefault();
       });
     </script>
