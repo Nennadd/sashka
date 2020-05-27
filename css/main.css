@@ -77,7 +77,7 @@ h1 {
 }
 .container {
   max-width: 30%;
-  margin: 0 3.5rem;
+  margin: 0 4.5rem;
 }
 .home .container {
   flex-grow: 1;
@@ -139,6 +139,27 @@ h1 {
 .home .controls .prev:hover,
 .home .controls .next:hover {
   background-color: rgb(63, 8, 63);
+}
+.indicators {
+  position: absolute;
+  display: flex;
+  column-gap: 0.4rem;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  justify-content: center;
+  z-index: 2;
+}
+.home .indicators div {
+  width: 1.7rem;
+  height: 1.7rem;
+  text-align: center;
+  line-height: 1.7rem;
+  background: #eaebf3;
+  border-radius: 100%;
+  color: purple;
+  box-shadow: inset -3px -3px 3px #fff, inset 2px 2px 3px #aaa;
+  cursor: pointer;
 }
 
 /* NOTE ABOUT !!! */

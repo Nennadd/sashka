@@ -7,7 +7,8 @@ const slides = document.querySelector(".slider").children;
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 let index = 0;
-let intervalID;
+let indicators = document.querySelector(".indicators");
+
 prev.addEventListener("click", () => {
   prevSlide();
 });
@@ -40,6 +41,16 @@ function changeSlide() {
   slides[index].classList.add("active");
 }
 
-// intervalID = setInterval(() => {
-//   nextSlide();
-// }, 4000);
+(function circleIndicators() {
+  for (let i = 0; i < slides.length; i++) {
+    let circle = document.createElement("div");
+    circle.textContent = i + 1;
+    circle.setAttribute("onclick", "indicateSlides(this)");
+
+    indicators.append(circle);
+  }
+})();
+
+function indicateSlides(slide) {
+  console.log(slide);
+}
