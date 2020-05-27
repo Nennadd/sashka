@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <script
       src="https://kit.fontawesome.com/464a44f0d5.js"
       crossorigin="anonymous"
@@ -13,14 +13,68 @@
   <body>
     <!-- // NOTE HOME !!! -->
     <section class="home">
-      <nav>
+      <!-- <nav>
         <ul class="nav">
           <li><a href="#">home</a></li>
           <li><a href="#">about</a></li>
           <li><a href="#">work</a></li>
           <li><a href="#">contact</a></li>
         </ul>
-      </nav>
+      </nav> -->
+
+      <div class="slider">
+        <div
+          class="slide active"
+          style="background-image: url('images/woman.jpg');"
+        >
+          <div class="container">
+            <div class="caption">
+              <h1>Lorem Ipsum</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur esse rerum similique debitis repellendus dolorum
+                facere repudiandae itaque, sed voluptatibus aliquid corrupti est
+                minima laudantium mollitia soluta repellat et! Ea adipisci eius
+                dolores!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="slide"
+          style="background-image: url('images/umbrella.jpg');"
+        >
+          <div class="container">
+            <div class="caption">
+              <h1>Lorem Ipsum</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur esse rerum similique debitis repellendus dolorum
+                facere repudiandae itaque, sed voluptatibus aliquid corrupti est
+                minima laudantium mollitia soluta repellat et! Ea adipisci eius
+                dolores!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="slide"
+          style="background-image: url('images/children.jpg');"
+        >
+          <div class="container">
+            <div class="caption">
+              <h1>Lorem Ipsum</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur esse rerum similique debitis repellendus dolorum
+                facere repudiandae itaque, sed voluptatibus aliquid corrupti est
+                minima laudantium mollitia soluta repellat et! Ea adipisci eius
+                dolores!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- NOTE ABOUT !!! -->
@@ -39,26 +93,7 @@
             <span>+381 603620520</span>
           </div>
         </div>
-        <div class="about-right">
-          <!-- <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-            temporibus repellendus eveniet, ipsam libero, maxime quibusdam animi
-            praesentium numquam sed, culpa quidem suscipit! Quod cupiditate ut
-            corporis soluta neque est. Itaque veritatis accusantium eligendi sit
-            consequatur nisi? Aut eaque quam fuga debitis ullam amet doloribus
-            quia voluptatem quos minima inventore architecto, perferendis vitae
-            numquam et!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-            temporibus repellendus eveniet, ipsam libero, maxime quibusdam animi
-            praesentium numquam sed, culpa quidem suscipit! Quod cupiditate ut
-            corporis soluta neque est. Itaque veritatis accusantium eligendi sit
-            consequatur nisi? Aut eaque quam fuga debitis ullam amet doloribus
-            quia voluptatem quos minima inventore architecto, perferendis vitae
-            numquam et!
-          </p> -->
-        </div>
+        <div class="about-right"></div>
       </div>
     </section>
 
@@ -121,11 +156,6 @@
       </form>
     </section>
 
-    <script>
-      const button = document.querySelector("button");
-      button.addEventListener("click", (e) => {
-        e.preventDefault();
-      });
-    </script>
+    <script src="js/app.js"></script>
   </body>
 </html>
