@@ -11,9 +11,11 @@ let indicators = document.querySelector(".indicators");
 
 prev.addEventListener("click", () => {
   prevSlide();
+  updateIndicators();
 });
 next.addEventListener("click", () => {
   nextSlide();
+  updateIndicators();
 });
 
 function prevSlide() {
@@ -39,18 +41,41 @@ function changeSlide() {
     slides[i].classList.remove("active");
   }
   slides[index].classList.add("active");
+  resetTimer();
 }
 
 (function circleIndicators() {
   for (let i = 0; i < slides.length; i++) {
     let circle = document.createElement("div");
     circle.textContent = i + 1;
+    circle.id = i;
     circle.setAttribute("onclick", "indicateSlides(this)");
+    if (i === 0) circle.className = "active-circle";
 
-    indicators.append(circle);
+    indicators.appendChild(circle);
   }
 })();
 
-function indicateSlides(slide) {
-  console.log(slide);
+function updateIndicators() {
+  for (let i = 0; i < indicators.children.length; i++) {
+    indicators.children[i].classList.remove("active-circle");
+  }
+  indicators.children[index].classList.add("active-circle");
+}
+function indicateSlides(element) {
+  index = +element.id;
+  changeSlide();
+  updateIndicators();
+}
+
+function autoPlay() {
+  nextSlide();
+  updateIndicators();
+}
+
+let timer = setInterval(autoPlay, 5000);
+
+function resetTimer() {
+  clearInterval(timer);
+  timer = setInterval(autoPlay, 5000);
 }
