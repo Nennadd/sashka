@@ -233,6 +233,9 @@ button:focus {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.icon a {
+  text-decoration: none;
+}
 .icon:hover {
   /* box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff; */
   box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa;
