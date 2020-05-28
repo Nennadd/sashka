@@ -411,6 +411,7 @@ button:focus {
   align-items: center;
   /* box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa; */
   box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
+  text-decoration: none;
   cursor: pointer;
   opacity: 0;
   transition: all 0.3s ease;
@@ -418,6 +419,8 @@ button:focus {
 .icon-show {
   opacity: 1;
   animation: buttons 2s ease;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
 }
 @keyframes buttons {
   0% {
@@ -428,9 +431,6 @@ button:focus {
     transform: translateX(0) rotate(360deg);
     opacity: 1;
   }
-}
-.icon {
-  text-decoration: none;
 }
 .icon:hover {
   /* box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff; */
