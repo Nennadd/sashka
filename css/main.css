@@ -302,7 +302,7 @@ img:hover {
 }
 .work-card hr {
   width: 80%;
-  color: purple;
+  color: rgb(179, 112, 179);
 }
 .work-card button {
   display: block;
