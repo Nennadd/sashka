@@ -80,16 +80,18 @@ function resetTimer() {
   timer = setInterval(autoPlay, 5000);
 }
 
-const aboutImgContainer = document.querySelector(".img-container");
-const rightBox = document.querySelector(".right-box");
-const leftBox = document.querySelector(".left-box");
-const buttons = document.querySelectorAll(".icon");
-const workCard1 = document.querySelector(".card1");
-const workCard2 = document.querySelector(".card2");
-const workCard3 = document.querySelector(".card3");
-window.addEventListener("scroll", () => {
+// NOTE SET ONSCROLL EVENTS !!! ***************************************8
+function onScroll() {
+  const aboutImgContainer = document.querySelector(".img-container");
+  const rightBox = document.querySelector(".right-box");
+  const leftBox = document.querySelector(".left-box");
+  const buttons = document.querySelectorAll(".icon");
+  const workCard1 = document.querySelector(".card1");
+  const workCard2 = document.querySelector(".card2");
+  const workCard3 = document.querySelector(".card3");
+
   let height = scrollY;
-  console.log(height);
+  // console.log(height);
   if (height > 400) aboutImgContainer.classList.add("img-show");
   if (height > 800) workCard1.classList.add("card1-show");
   if (height > 800) workCard2.classList.add("card2-show");
@@ -101,4 +103,6 @@ window.addEventListener("scroll", () => {
       element.classList.add("icon-show");
     });
   }
-});
+}
+
+window.addEventListener("scroll", onScroll);

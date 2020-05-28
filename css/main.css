@@ -317,6 +317,9 @@ img:hover {
   box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
   cursor: pointer;
 }
+.work-card button:focus {
+  outline-style: none;
+}
 .work-card button:hover {
   box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
 }
@@ -325,7 +328,7 @@ img:hover {
 }
 .card1-show {
   opacity: 1;
-  animation: card1Show 1.5s ease;
+  animation: card1Show 1s ease;
   animation-fill-mode: forwards;
   animation-delay: 1s;
 }
@@ -360,7 +363,7 @@ img:hover {
 }
 .card3-show {
   opacity: 1;
-  animation: card3Show 1.5s ease;
+  animation: card3Show 1s ease;
   animation-fill-mode: forwards;
   animation-delay: 1s;
 }
