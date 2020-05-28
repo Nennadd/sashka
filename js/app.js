@@ -84,10 +84,16 @@ const aboutImgContainer = document.querySelector(".img-container");
 const rightBox = document.querySelector(".right-box");
 const leftBox = document.querySelector(".left-box");
 const buttons = document.querySelectorAll(".icon");
+const workCard1 = document.querySelector(".card1");
+const workCard2 = document.querySelector(".card2");
+const workCard3 = document.querySelector(".card3");
 window.addEventListener("scroll", () => {
   let height = scrollY;
   console.log(height);
   if (height > 400) aboutImgContainer.classList.add("img-show");
+  if (height > 750) workCard1.classList.add("card1-show");
+  if (height > 750) workCard2.classList.add("card2-show");
+  if (height > 750) workCard3.classList.add("card3-show");
   if (height > 1160) rightBox.classList.add("right-box-show");
   if (height > 1550) leftBox.classList.add("left-box-show");
   if (height > 1630) {

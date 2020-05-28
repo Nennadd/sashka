@@ -320,6 +320,60 @@ img:hover {
 .work-card button:hover {
   box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
 }
+.work .work-wrapper .card1 {
+  opacity: 0;
+}
+.card1-show {
+  opacity: 1;
+  animation: card1Show 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+@keyframes card1Show {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.work .work-wrapper .card2 {
+  opacity: 0;
+}
+.card2-show {
+  opacity: 1;
+  animation: card2Show 3s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes card2Show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.work .work-wrapper .card3 {
+  opacity: 0;
+}
+.card3-show {
+  opacity: 1;
+  animation: card3Show 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+@keyframes card3Show {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 /* NOTE CONTACT !!! */
 .contact {
