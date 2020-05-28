@@ -81,11 +81,15 @@ function resetTimer() {
 }
 
 const aboutImgContainer = document.querySelector(".img-container");
+const rightBox = document.querySelector(".right-box");
+const leftBox = document.querySelector(".left-box");
 const buttons = document.querySelectorAll(".icon");
 window.addEventListener("scroll", () => {
   let height = scrollY;
   console.log(height);
   if (height > 400) aboutImgContainer.classList.add("img-show");
+  if (height > 680) rightBox.classList.add("right-box-show");
+  if (height > 1000) leftBox.classList.add("left-box-show");
   if (height > 1170) {
     buttons.forEach((element) => {
       element.classList.add("icon-show");

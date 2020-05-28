@@ -325,29 +325,44 @@ button:focus {
 }
 .left-box {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 75%;
   left: 1rem;
   height: 3rem;
-  width: 20%;
+  width: 33%;
   background-color: rgba(128, 3, 128, 0.8);
-  animation: box-width 1s ease;
-  animation-fill-mode: backwards;
-  animation-delay: 0.5s;
+  opacity: 0;
+}
+.left-box span {
+  font-size: 0.85rem;
+  color: #fff;
 }
 .right-box {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 10%;
   right: 1rem;
   height: 3rem;
   width: 20%;
   background-color: rgba(128, 3, 128, 0.7);
-  animation: box-width 1s ease;
-  animation-fill-mode: backwards;
-  animation-delay: 1s;
+  opacity: 0;
 }
-@keyframes box-width {
+.right-box span {
+  color: #fff;
+}
+.right-box-show {
+  opacity: 1;
+  animation: box-width1 1s ease;
+  animation-fill-mode: backwards;
+}
+@keyframes box-width1 {
   0% {
     width: 0%;
+    opacity: 0;
   }
   50% {
     width: 20%;
@@ -357,6 +372,28 @@ button:focus {
   }
   100% {
     width: 20%;
+    opacity: 1;
+  }
+}
+.left-box-show {
+  opacity: 1;
+  animation: box-width2 1s ease;
+  animation-fill-mode: backwards;
+}
+@keyframes box-width2 {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  50% {
+    width: 33%;
+  }
+  70% {
+    width: 28%;
+  }
+  100% {
+    width: 33%;
+    opacity: 1;
   }
 }
 .icons {
