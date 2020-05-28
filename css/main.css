@@ -325,14 +325,14 @@ img:hover {
 }
 .card1-show {
   opacity: 1;
-  animation: card1Show 1s ease;
+  animation: card1Show 1.5s ease;
   animation-fill-mode: forwards;
   animation-delay: 1s;
 }
 @keyframes card1Show {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(150px);
   }
   100% {
     opacity: 1;
@@ -360,14 +360,14 @@ img:hover {
 }
 .card3-show {
   opacity: 1;
-  animation: card3Show 1s ease;
+  animation: card3Show 1.5s ease;
   animation-fill-mode: forwards;
   animation-delay: 1s;
 }
 @keyframes card3Show {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-150px);
   }
   100% {
     opacity: 1;

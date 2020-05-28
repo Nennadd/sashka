@@ -91,9 +91,9 @@ window.addEventListener("scroll", () => {
   let height = scrollY;
   console.log(height);
   if (height > 400) aboutImgContainer.classList.add("img-show");
-  if (height > 750) workCard1.classList.add("card1-show");
-  if (height > 750) workCard2.classList.add("card2-show");
-  if (height > 750) workCard3.classList.add("card3-show");
+  if (height > 800) workCard1.classList.add("card1-show");
+  if (height > 800) workCard2.classList.add("card2-show");
+  if (height > 800) workCard3.classList.add("card3-show");
   if (height > 1160) rightBox.classList.add("right-box-show");
   if (height > 1550) leftBox.classList.add("left-box-show");
   if (height > 1630) {
