@@ -1,4 +1,4 @@
-const button = document.querySelector("button");
+const button = document.querySelector(".form-btn");
 button.addEventListener("click", (e) => {
   e.preventDefault();
 });
@@ -88,9 +88,9 @@ window.addEventListener("scroll", () => {
   let height = scrollY;
   console.log(height);
   if (height > 400) aboutImgContainer.classList.add("img-show");
-  if (height > 680) rightBox.classList.add("right-box-show");
-  if (height > 1000) leftBox.classList.add("left-box-show");
-  if (height > 1170) {
+  if (height > 1160) rightBox.classList.add("right-box-show");
+  if (height > 1550) leftBox.classList.add("left-box-show");
+  if (height > 1630) {
     buttons.forEach((element) => {
       element.classList.add("icon-show");
     });
