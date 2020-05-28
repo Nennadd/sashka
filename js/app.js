@@ -79,3 +79,10 @@ function resetTimer() {
   clearInterval(timer);
   timer = setInterval(autoPlay, 5000);
 }
+
+const aboutImgContainer = document.querySelector(".img-container");
+window.addEventListener("scroll", () => {
+  let height = scrollY;
+
+  if (height > 400) aboutImgContainer.classList.add("img-show");
+});
