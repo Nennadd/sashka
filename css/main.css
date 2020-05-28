@@ -369,14 +369,28 @@ button:focus {
   width: 60px;
   height: 60px;
   margin: 0 20px;
-  /* padding: 20px; */
   border-radius: 50%;
   justify-content: center;
   align-items: center;
   /* box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa; */
   box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
   cursor: pointer;
+  opacity: 0;
   transition: all 0.3s ease;
+}
+.icon-show {
+  opacity: 1;
+  animation: buttons 2s ease;
+}
+@keyframes buttons {
+  0% {
+    transform: translateX(-100px) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+    opacity: 1;
+  }
 }
 .icon {
   text-decoration: none;

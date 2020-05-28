@@ -81,8 +81,14 @@ function resetTimer() {
 }
 
 const aboutImgContainer = document.querySelector(".img-container");
+const buttons = document.querySelectorAll(".icon");
 window.addEventListener("scroll", () => {
   let height = scrollY;
-
+  console.log(height);
   if (height > 400) aboutImgContainer.classList.add("img-show");
+  if (height > 1170) {
+    buttons.forEach((element) => {
+      element.classList.add("icon-show");
+    });
+  }
 });
