@@ -21,7 +21,7 @@ h1 {
   font-size: 1.4rem;
 }
 
-/* NOTE HOME !!! */
+/* NOTE MENU !!! */
 /* .nav {
   display: flex;
   list-style: none;
@@ -44,6 +44,8 @@ h1 {
   text-transform: uppercase;
   font-weight: 700;
 } */
+
+/* NOTE HOME !!! */
 .home {
   position: relative;
   height: 100vh;
@@ -101,7 +103,7 @@ h1 {
 }
 .home .caption p {
   font-size: 1rem;
-  color: rgb(207, 195, 204);
+  color: rgb(180, 120, 165);
 }
 .home .active .caption p {
   opacity: 0;
@@ -252,12 +254,98 @@ img:hover {
 }
 
 /* NOTE WORK !!! */
+.work-modal {
+  position: fixed;
+  display: none;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 100% 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #eaebf3;
+  z-index: 3;
+  animation: showModal 1s ease;
+}
+@keyframes showModal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.work-modal .close-modal {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* top: 0;
+  left: 0;
+  bottom: 0; */
+  /* width: 4rem; */
+  background: #eaebf3;
+  border-right: 1px solid purple;
+  cursor: pointer;
+}
+.close {
+  animation: close 1s ease;
+}
+@keyframes close {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.work-modal .close-modal span {
+  display: inline-block;
+  font-size: 2.3rem;
+  letter-spacing: 0.6rem;
+  font-weight: 700;
+  color: purple;
+  transform: rotateZ(-90deg);
+  animation: showThumbs 2s ease;
+  animation-delay: 0.3s;
+  animation-fill-mode: backwards;
+}
+.work .work-modal .gallery {
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  padding: 1rem 0;
+  overflow: hidden;
+  /* background: aqua; */
+}
+.work .work-modal .gallery .thumbs {
+  width: 120px;
+  height: 130px;
+  box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
+  overflow: hidden;
+  animation: showThumbs 2s ease;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+.work .work-modal .gallery .thumbs img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+@keyframes showThumbs {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .work {
   padding: 2rem 0 4rem;
 }
 .work-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
   justify-content: space-around;
   width: 80%;
   margin: 0 auto;
@@ -296,7 +384,7 @@ img:hover {
   width: 100%;
   max-width: 100%;
   height: auto;
-  transition: transform 0.5s ease;
+  transition: all 0.5s ease;
 }
 .work-card p {
   text-align: center;
@@ -380,6 +468,11 @@ img:hover {
     opacity: 1;
     transform: translateX(0);
   }
+}
+.work .work-wrapper .card4,
+.work .work-wrapper .card5,
+.work .work-wrapper .card6 {
+  opacity: 0;
 }
 
 /* NOTE CONTACT !!! */

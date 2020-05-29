@@ -1,8 +1,9 @@
-const button = document.querySelector(".form-btn");
-button.addEventListener("click", (e) => {
+const formBtn = document.querySelector(".form-btn");
+formBtn.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
+// NOTE HOME SLIDER !!!
 const slides = document.querySelector(".slider").children;
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
@@ -89,6 +90,9 @@ function onScroll() {
   const workCard1 = document.querySelector(".card1");
   const workCard2 = document.querySelector(".card2");
   const workCard3 = document.querySelector(".card3");
+  const workCard4 = document.querySelector(".card4");
+  const workCard5 = document.querySelector(".card5");
+  const workCard6 = document.querySelector(".card6");
 
   let height = scrollY;
   // console.log(height);
@@ -96,6 +100,9 @@ function onScroll() {
   if (height > 800) workCard1.classList.add("card1-show");
   if (height > 800) workCard2.classList.add("card2-show");
   if (height > 800) workCard3.classList.add("card3-show");
+  if (height > 1200) workCard4.classList.add("card1-show");
+  if (height > 1200) workCard5.classList.add("card2-show");
+  if (height > 1200) workCard6.classList.add("card3-show");
   if (height > 1160) rightBox.classList.add("right-box-show");
   if (height > 1550) leftBox.classList.add("left-box-show");
   if (height > 1630) {
@@ -106,3 +113,41 @@ function onScroll() {
 }
 
 window.addEventListener("scroll", onScroll);
+
+// NOTE MY WORK !!!
+const workButtons = document.querySelectorAll(".work-btn");
+workButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    // NOTE Show Modal !!!
+    modal = document.querySelector(".work-modal");
+    modal.style.display = "grid";
+
+    // NOTE Prevent Scroll !!!
+    const body = document.querySelector("body");
+
+    setTimeout(() => {
+      body.style.overflow = "hidden";
+    }, 1000);
+
+    // NOTE Append Image !!!
+    // const img = document.querySelector(`.${e.target.id}`);
+    // const div = document.createElement("div");
+    // div.style.position = "fixed";
+    // div.style.width = img.width + "px";
+    // div.style.height = img.height + "px";
+    // div.style.top = img.getBoundingClientRect().y + "px";
+    // div.style.left = img.getBoundingClientRect().x + "px";
+    // div.style.backgroundColor = "aqua";
+
+    console.log(img.getAttribute("src"));
+  });
+});
+
+const close = document.querySelector(".close-modal");
+close.addEventListener("click", () => {
+  modal = document.querySelector(".work-modal");
+  modal.style.display = "none";
+
+  const body = document.querySelector("body");
+  body.style.overflow = "";
+});
