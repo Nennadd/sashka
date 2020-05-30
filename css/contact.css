@@ -117,13 +117,13 @@ i {
 .email-box-show {
   opacity: 1;
   animation: box-width 1s ease;
-  animation-delay: 0.5s;
+  /* animation-delay: 0.5s; */
   animation-fill-mode: backwards;
 }
 .phone-box-show {
   opacity: 1;
   animation: box-width 1s ease;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
 @keyframes box-width {
@@ -163,7 +163,7 @@ i {
 .icon-show {
   opacity: 1;
   animation: buttons 2s ease;
-  animation-delay: 2.5s;
+  animation-delay: 1s;
   animation-fill-mode: backwards;
 }
 @keyframes buttons {

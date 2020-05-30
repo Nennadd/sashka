@@ -106,7 +106,7 @@ function onScroll() {
 
   let height = scrollY;
   let width = scrollX;
-  // console.log(height);
+  console.log(height);
   //  if (width > 560) {
   if (height > 400) aboutImgContainer.classList.add("img-show");
   if (height > 800) workCard1.classList.add("card1-show");
@@ -115,9 +115,9 @@ function onScroll() {
   if (height > 1200) workCard4.classList.add("card1-show");
   if (height > 1200) workCard5.classList.add("card2-show");
   if (height > 1200) workCard6.classList.add("card3-show");
-  if (height > 1160) rightBox.classList.add("phone-box-show");
-  if (height > 1550) leftBox.classList.add("email-box-show");
-  if (height > 1630) {
+  if (height > 1850) leftBox.classList.add("email-box-show");
+  if (height > 1950) rightBox.classList.add("phone-box-show");
+  if (height > 2050) {
     buttons.forEach((element) => {
       element.classList.add("icon-show");
     });
