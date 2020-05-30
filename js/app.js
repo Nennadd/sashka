@@ -84,8 +84,8 @@ function resetTimer() {
 // NOTE SET ONSCROLL EVENTS !!! ***************************************8
 function onScroll() {
   const aboutImgContainer = document.querySelector(".img-container");
-  const rightBox = document.querySelector(".right-box");
-  const leftBox = document.querySelector(".left-box");
+  const rightBox = document.querySelector(".phone-box");
+  const leftBox = document.querySelector(".email-box");
   const buttons = document.querySelectorAll(".icon");
   const workCard1 = document.querySelector(".card1");
   const workCard2 = document.querySelector(".card2");
@@ -103,8 +103,8 @@ function onScroll() {
   if (height > 1200) workCard4.classList.add("card1-show");
   if (height > 1200) workCard5.classList.add("card2-show");
   if (height > 1200) workCard6.classList.add("card3-show");
-  if (height > 1160) rightBox.classList.add("right-box-show");
-  if (height > 1550) leftBox.classList.add("left-box-show");
+  if (height > 1160) rightBox.classList.add("phone-box-show");
+  if (height > 1550) leftBox.classList.add("email-box-show");
   if (height > 1630) {
     buttons.forEach((element) => {
       element.classList.add("icon-show");
@@ -136,7 +136,6 @@ workButtons.forEach((button) => {
 
 const close = document.querySelector(".close-modal");
 close.addEventListener("click", () => {
-  // modal.style.display = "none";
   modal.classList.add("close");
   setTimeout(() => {
     modal.className = "modal";
