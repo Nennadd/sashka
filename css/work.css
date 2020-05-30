@@ -218,3 +218,17 @@
 .work .work-wrapper .card6 {
   opacity: 0;
 }
+
+@media screen and (max-width: 560px) {
+  .work {
+    padding: 1rem;
+  }
+  .work-wrapper {
+    /* display: grid; */
+    grid-template-columns: auto;
+    /* justify-content: space-around; */
+    width: 80%;
+    margin: 0 auto;
+    /* column-gap: 2rem; */
+  }
+}
