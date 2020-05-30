@@ -106,7 +106,7 @@ function onScroll() {
 
   let height = scrollY;
   let width = scrollX;
-  console.log(height);
+  // console.log(height);
   //  if (width > 560) {
   if (height > 400) aboutImgContainer.classList.add("img-show");
   if (height > 800) workCard1.classList.add("card1-show");
