@@ -95,7 +95,9 @@ function onScroll() {
   const workCard6 = document.querySelector(".card6");
 
   let height = scrollY;
+  let width = scrollX;
   // console.log(height);
+  //  if (width > 560) {
   if (height > 400) aboutImgContainer.classList.add("img-show");
   if (height > 800) workCard1.classList.add("card1-show");
   if (height > 800) workCard2.classList.add("card2-show");
@@ -110,6 +112,7 @@ function onScroll() {
       element.classList.add("icon-show");
     });
   }
+  //  }
 }
 
 window.addEventListener("scroll", onScroll);

@@ -78,3 +78,11 @@ img:hover {
   font-size: 0.85rem;
   text-align: center;
 }
+
+@media screen and (max-width: 560px) {
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
