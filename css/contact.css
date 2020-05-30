@@ -1,193 +1,4 @@
 /* NOTE CONTACT !!! */
-/* .contact {
-  position: relative;
-  padding: 2rem 0;
-}
-form {
-  display: grid;
-  gap: 1rem;
-  width: 45%;
-  margin: 2rem auto;
-}
-.inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 1rem;
-  margin-bottom: 0.6rem;
-}
-input,
-textarea {
-  width: 100%;
-  color: rgb(98, 7, 98);
-  border: none;
-  border-radius: 15px;
-  background-color: #eaebf3;
-  box-shadow: -3px -3px 3px #fff, 3px 3px 3px #aaa;
-}
-input {
-  padding: 0.8rem 0.8rem 0.8rem 1.8rem;
-  font-size: 0.9rem;
-}
-textarea {
-  font-size: 0.9rem;
-  padding: 0.65rem 0.8rem 0.8rem 2rem;
-  font-family: "Poppins", sans-serif;
-}
-input:focus,
-textarea:focus {
-  box-shadow: inset 3px 3px 3px #aaa, inset -3px -3px 3px #fff;
-  outline-style: none;
-  color: purple;
-}
-.form-control {
-  position: relative;
-}
-i {
-  color: rgb(102, 7, 102);
-}
-.input-icon {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.85rem;
-}
-.textarea-box .input-icon {
-  top: 0.95rem;
-}
-.contact form button {
-  display: block;
-  width: 40%;
-  padding: 0.6rem 0;
-  color: rgb(102, 7, 102);
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin: 0.8rem auto;
-  border: none;
-  border-radius: 10px;
-  box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
-  cursor: pointer;
-}
-.contact form button:active {
-  box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
-}
-.contact form button:focus {
-  outline-style: none;
-}
-.left-box {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 75%;
-  left: 1rem;
-  height: 3rem;
-  width: 33%;
-  background-color: rgba(128, 3, 128, 0.8);
-  opacity: 0;
-}
-.left-box span {
-  font-size: 0.85rem;
-  color: #fff;
-}
-.right-box {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 10%;
-  right: 1rem;
-  height: 3rem;
-  width: 20%;
-  background-color: rgba(128, 3, 128, 0.7);
-  opacity: 0;
-}
-.right-box span {
-  color: #fff;
-}
-.right-box-show {
-  opacity: 1;
-  animation: box-width1 1s ease;
-  animation-fill-mode: backwards;
-}
-@keyframes box-width1 {
-  0% {
-    width: 0%;
-    opacity: 0;
-  }
-  50% {
-    width: 20%;
-  }
-  70% {
-    width: 18%;
-  }
-  100% {
-    width: 20%;
-    opacity: 1;
-  }
-}
-.left-box-show {
-  opacity: 1;
-  animation: box-width2 1s ease;
-  animation-fill-mode: backwards;
-}
-@keyframes box-width2 {
-  0% {
-    width: 0%;
-    opacity: 0;
-  }
-  50% {
-    width: 33%;
-  }
-  70% {
-    width: 28%;
-  }
-  100% {
-    width: 33%;
-    opacity: 1;
-  }
-}
-.icons {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-.icon {
-  display: flex;
-  width: 60px;
-  height: 60px;
-  margin: 0 20px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-.icon-show {
-  opacity: 1;
-  animation: buttons 2s ease;
-  animation-delay: 0.3s;
-  animation-fill-mode: backwards;
-}
-@keyframes buttons {
-  0% {
-    transform: translateX(-100px) rotate(0deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotate(360deg);
-    opacity: 1;
-  }
-}
-.icon:hover {
-  box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa;
-  font-size: 1.04rem;
-} */
-
-/* NOTE CONTACT !!! */
-/* NOTE CONTACT !!! */
-/* NOTE CONTACT !!! */
 .contact {
   position: relative;
   padding: 2rem 0;
@@ -384,14 +195,9 @@ i {
     /* background: pink; */
   }
   .right-side {
-    /* display: flex; */
-    /* flex-direction: column; */
     row-gap: 1rem;
     height: 100%;
-    /* justify-content: space-between; */
-    /* align-items: center; */
     padding: 2rem 0;
-    /* background: aqua; */
   }
   form {
     width: 90%;
@@ -400,5 +206,8 @@ i {
   .inputs {
     grid-template-columns: 1fr;
     row-gap: 1rem;
+  }
+  .phone-box {
+    margin: 0.5rem 0;
   }
 }
