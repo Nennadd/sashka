@@ -1,0 +1,220 @@
+/* NOTE WORK !!! */
+.modal {
+  display: none;
+  position: fixed;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 100% 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #eaebf3;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+.show-modal {
+  display: grid;
+  animation: showModal 1s ease;
+}
+.close {
+  animation: close 1s ease;
+  /* animation-fill-mode: forwards; */
+}
+@keyframes showModal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+    display: none;
+  }
+}
+@keyframes close {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.modal .close-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid purple;
+  cursor: pointer;
+}
+.modal .close-modal span {
+  display: inline-block;
+  font-size: 2.3rem;
+  letter-spacing: 0.6rem;
+  font-weight: 700;
+  color: purple;
+  transform: rotateZ(-90deg);
+  animation: showThumbs 2s ease;
+  animation-delay: 0.3s;
+  animation-fill-mode: backwards;
+}
+.work .modal .gallery {
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  padding: 1rem 0;
+  overflow: hidden;
+  /* background: aqua; */
+}
+.work .modal .gallery .thumbs {
+  width: 120px;
+  height: 130px;
+  box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
+  overflow: hidden;
+  animation: showThumbs 2s ease;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+.work .modal .gallery .thumbs img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+@keyframes showThumbs {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.work {
+  padding: 2rem 0 4rem;
+}
+.work-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  column-gap: 2rem;
+}
+.work-card {
+  position: relative;
+  margin: 2rem 0;
+  box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
+}
+.work-card::before {
+  content: "";
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  top: 4px;
+  left: calc(50% - 0.35rem);
+  border-radius: 50%;
+  box-shadow: inset 3px 3px 3px #aaa, inset -3px -3px 3px #fff;
+}
+.work-card-container {
+  width: 270px;
+  height: 270px;
+  padding: 20px;
+}
+.work-img-box {
+  width: 100%;
+  height: 100%;
+  background: #aaa;
+  box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
+  overflow: hidden;
+}
+.work-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  transition: all 0.5s ease;
+}
+.work-card p {
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.work-card hr {
+  width: 80%;
+  color: rgb(179, 112, 179);
+}
+.work-card button {
+  position: relative;
+  display: block;
+  width: 40%;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin: 0.8rem auto;
+  border: none;
+  border-radius: 10px;
+  box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.work-card button:focus {
+  outline-style: none;
+}
+.work-card button:hover {
+  color: rgb(189, 15, 189);
+}
+.work .work-wrapper .card1 {
+  opacity: 0;
+}
+.card1-show {
+  opacity: 1;
+  animation: card1Show 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+@keyframes card1Show {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.work .work-wrapper .card2 {
+  opacity: 0;
+}
+.card2-show {
+  opacity: 1;
+  animation: card2Show 3s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes card2Show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.work .work-wrapper .card3 {
+  opacity: 0;
+}
+.card3-show {
+  opacity: 1;
+  animation: card3Show 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+@keyframes card3Show {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.work .work-wrapper .card4,
+.work .work-wrapper .card5,
+.work .work-wrapper .card6 {
+  opacity: 0;
+}
