@@ -150,6 +150,7 @@
   border: none;
   border-radius: 10px;
   box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -224,11 +225,16 @@
     padding: 1rem;
   }
   .work-wrapper {
-    /* display: grid; */
     grid-template-columns: auto;
-    /* justify-content: space-around; */
     width: 80%;
     margin: 0 auto;
-    /* column-gap: 2rem; */
+  }
+  .work-card p {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  .work-card button {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
   }
 }
