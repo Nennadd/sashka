@@ -254,9 +254,9 @@ img:hover {
 }
 
 /* NOTE WORK !!! */
-.work-modal {
-  position: fixed;
+.modal {
   display: none;
+  position: fixed;
   grid-template-columns: 80px 1fr;
   grid-template-rows: 100% 100%;
   top: 0;
@@ -265,7 +265,15 @@ img:hover {
   height: 100%;
   background: #eaebf3;
   z-index: 3;
+  transition: all 0.3s ease;
+}
+.show-modal {
+  display: grid;
   animation: showModal 1s ease;
+}
+.close {
+  animation: close 1s ease;
+  /* animation-fill-mode: forwards; */
 }
 @keyframes showModal {
   0% {
@@ -273,23 +281,8 @@ img:hover {
   }
   100% {
     transform: translateX(0);
+    display: none;
   }
-}
-.work-modal .close-modal {
-  /* position: absolute; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* top: 0;
-  left: 0;
-  bottom: 0; */
-  /* width: 4rem; */
-  background: #eaebf3;
-  border-right: 1px solid purple;
-  cursor: pointer;
-}
-.close {
-  animation: close 1s ease;
 }
 @keyframes close {
   0% {
@@ -299,7 +292,14 @@ img:hover {
     transform: translateX(100%);
   }
 }
-.work-modal .close-modal span {
+.modal .close-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid purple;
+  cursor: pointer;
+}
+.modal .close-modal span {
   display: inline-block;
   font-size: 2.3rem;
   letter-spacing: 0.6rem;
@@ -310,7 +310,7 @@ img:hover {
   animation-delay: 0.3s;
   animation-fill-mode: backwards;
 }
-.work .work-modal .gallery {
+.work .modal .gallery {
   display: flex;
   column-gap: 30px;
   justify-content: center;
@@ -318,7 +318,7 @@ img:hover {
   overflow: hidden;
   /* background: aqua; */
 }
-.work .work-modal .gallery .thumbs {
+.work .modal .gallery .thumbs {
   width: 120px;
   height: 130px;
   box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
@@ -327,7 +327,7 @@ img:hover {
   animation-delay: 1s;
   animation-fill-mode: backwards;
 }
-.work .work-modal .gallery .thumbs img {
+.work .modal .gallery .thumbs img {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -367,11 +367,9 @@ img:hover {
   box-shadow: inset 3px 3px 3px #aaa, inset -3px -3px 3px #fff;
 }
 .work-card-container {
-  position: relative;
   width: 270px;
   height: 270px;
   padding: 20px;
-  /* box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa; */
 }
 .work-img-box {
   width: 100%;
@@ -397,23 +395,24 @@ img:hover {
   color: rgb(179, 112, 179);
 }
 .work-card button {
+  position: relative;
   display: block;
   width: 40%;
   padding: 0.5rem 0;
-  /* color: rgb(102, 7, 102); */
   font-weight: 700;
   font-size: 0.8rem;
   margin: 0.8rem auto;
   border: none;
   border-radius: 10px;
-  box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
+  box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 .work-card button:focus {
   outline-style: none;
 }
 .work-card button:hover {
-  box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
+  color: rgb(189, 15, 189);
 }
 .work .work-wrapper .card1 {
   opacity: 0;
