@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
   background: #eaebf3;
-  z-index: 3;
+  z-index: 21;
   transition: all 0.3s ease;
 }
 .show-modal {

@@ -3,6 +3,16 @@ formBtn.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
+// NOTE NAVIGATION !!!
+const menu = document.querySelector(".menu-btn");
+let isOpen = false;
+menu.addEventListener("click", () => {
+  const navigation = document.querySelector(".nav");
+  isOpen = !isOpen;
+  if (isOpen) navigation.style.display = "block";
+  if (!isOpen) navigation.style.display = "none";
+});
+
 // NOTE HOME SLIDER !!!
 const slides = document.querySelector(".slider").children;
 const prev = document.querySelector(".prev");
