@@ -335,13 +335,13 @@
   .work .modal .gallery-box .gallery {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
+  .work .modal .modal-left {
+    overflow-y: auto;
+  }
 }
 @media screen and (max-width: 560px) {
   .work .modal .gallery-box .gallery {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
-  }
-  .work .modal .modal-left {
-    overflow-y: auto;
   }
   .work .modal .modal-left .thumbs {
     margin: 8rem 0;
