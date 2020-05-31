@@ -105,8 +105,8 @@ function onScroll() {
   const workCard6 = document.querySelector(".card6");
 
   let height = scrollY;
-  let width = scrollX;
-  // console.log(height);
+  let width = innerWidth;
+  console.log(width);
   //  if (width > 560) {
   if (height > 400) aboutImgContainer.classList.add("img-show");
   if (height > 800) workCard1.classList.add("card1-show");
