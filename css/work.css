@@ -223,7 +223,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto;
+  overflow: hidden;
+  box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
 }
 .work .modal .modal-left .close-btn {
   position: absolute;
@@ -243,17 +244,25 @@
   letter-spacing: 1px;
   cursor: pointer;
 }
+.work .modal .modal-left .close-btn:active {
+  box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
+}
+.work .modal .modal-left .close-btn:focus {
+  outline-style: none;
+}
 .work .modal .modal-left .thumbs {
   display: grid;
   row-gap: 0.5rem;
   grid-template-columns: repeat(auto-fit, minmax(40px, 70px));
   padding: 0.5rem;
   margin: 6rem 0;
-  box-shadow: -5px -5px 7px #fff, 3px 3px 4px #aaa;
+  /* box-shadow: -5px -5px 7px #fff, 3px 3px 4px #aaa; */
   /* border: 2px solid purple; */
 }
 .work .modal .modal-left .thumb {
-  box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
+  width: 100%;
+  height: 100%;
+  box-shadow: -3px -3px 5px #fff, 5px 5px 7px #aaa;
   cursor: pointer;
 }
 .work .modal .modal-left .thumbs img {
@@ -292,11 +301,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #353535;
+  /* background: #353535;
   font-size: 3rem;
   color: #fff;
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
-    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.17rem;
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.17rem; */
   height: 100%;
   width: 100%;
   border-radius: 4px;
@@ -330,6 +339,9 @@
 @media screen and (max-width: 560px) {
   .work .modal .gallery-box .gallery {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+  .work .modal .modal-left {
+    overflow-y: auto;
   }
   .work .modal .modal-left .thumbs {
     margin: 8rem 0;

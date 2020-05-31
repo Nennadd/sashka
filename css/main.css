@@ -72,6 +72,12 @@ nav {
   letter-spacing: 1px;
   cursor: pointer;
 }
+.home .menu-btn:active {
+  box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
+}
+.home .menu-btn:focus {
+  outline-style: none;
+}
 .nav {
   display: none;
   position: relative;
