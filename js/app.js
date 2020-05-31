@@ -147,7 +147,7 @@ workButtons.forEach((button) => {
   });
 });
 
-const close = document.querySelector(".close-modal");
+const close = document.querySelector(".close-btn");
 close.addEventListener("click", () => {
   modal.classList.add("close");
   setTimeout(() => {

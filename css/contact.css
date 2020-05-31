@@ -83,6 +83,13 @@ i {
   border-radius: 10px;
   box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
   cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    #eaebf3,
+    rgb(241, 232, 241),
+    rgb(216, 202, 216),
+    rgb(218, 175, 218)
+  );
 }
 .contact form button:active {
   box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
