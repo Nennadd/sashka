@@ -83,25 +83,6 @@ nav {
   position: relative;
   list-style: none;
 }
-.nav li {
-  position: absolute;
-}
-.nav .nav-item1 {
-  top: -35px;
-  left: 5px;
-}
-.nav .nav-item2 {
-  top: 5px;
-  left: 15px;
-}
-.nav .nav-item3 {
-  top: 43px;
-  left: -6px;
-}
-.nav .nav-item4 {
-  top: 65px;
-  left: -45px;
-}
 .nav li a {
   text-decoration: none;
 }
@@ -115,64 +96,12 @@ nav {
   border-radius: 100%;
   box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
   color: purple;
+  background-color: #eaebf3;
   animation: showNav 0.5s ease;
 }
 @keyframes showNav {
   0% {
     transform: translateX(-30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-.nav li a i:hover {
-  box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
-}
-.nav .nav-item1 a i:hover::after {
-  content: "HOME";
-  position: absolute;
-  width: 500px;
-  left: 70px;
-  font-size: 3rem;
-  letter-spacing: 0.7rem;
-  color: #aaa;
-  animation: showNavText 0.5s ease;
-}
-.nav .nav-item2 a i:hover::after {
-  content: "ABOUT ME";
-  position: absolute;
-  width: 500px;
-  left: 70px;
-  font-size: 3rem;
-  letter-spacing: 0.7rem;
-  color: #aaa;
-  animation: showNavText 0.5s ease;
-}
-.nav .nav-item3 a i:hover::after {
-  content: "MY WORK";
-  position: absolute;
-  width: 500px;
-  left: 70px;
-  font-size: 3rem;
-  letter-spacing: 0.7rem;
-  color: #aaa;
-  animation: showNavText 0.5s ease;
-}
-.nav .nav-item4 a i:hover::after {
-  content: "CONTACT";
-  position: absolute;
-  width: 500px;
-  left: 90px;
-  font-size: 3rem;
-  letter-spacing: 0.7rem;
-  color: #aaa;
-  animation: showNavText 0.5s ease;
-}
-@keyframes showNavText {
-  0% {
-    transform: translateX(-50px);
     opacity: 0;
   }
   100% {
@@ -301,19 +230,6 @@ nav {
   font-weight: 700;
   box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
 }
-
-@media screen and (max-width: 560px) {
-  .home .slide {
-    background-size: cover;
-    background-position: center;
-  }
-  .container {
-    top: 2rem;
-    bottom: 0;
-    max-width: 50%;
-    margin: 0 0 0 2.5rem;
-  }
-}
 .loader-container {
   position: fixed;
   display: flex;
@@ -350,5 +266,127 @@ nav {
     transform: rotate(360deg);
     border-left-color: purple;
     border-right-color: purple;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav li {
+    position: absolute;
+  }
+  .nav .nav-item1 {
+    top: -35px;
+    left: 5px;
+  }
+  .nav .nav-item2 {
+    top: 5px;
+    left: 15px;
+  }
+  .nav .nav-item3 {
+    top: 43px;
+    left: -6px;
+  }
+  .nav .nav-item4 {
+    top: 65px;
+    left: -45px;
+  }
+  .nav li a i:hover {
+    box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
+  }
+  .nav .nav-item1 a i:hover::after {
+    content: "HOME";
+    position: absolute;
+    width: 500px;
+    left: 70px;
+    font-size: 3rem;
+    letter-spacing: 0.7rem;
+    color: #aaa;
+    animation: showNavText 0.5s ease;
+  }
+  .nav .nav-item2 a i:hover::after {
+    content: "ABOUT ME";
+    position: absolute;
+    width: 500px;
+    left: 70px;
+    font-size: 3rem;
+    letter-spacing: 0.7rem;
+    color: #aaa;
+    animation: showNavText 0.5s ease;
+  }
+  .nav .nav-item3 a i:hover::after {
+    content: "MY WORK";
+    position: absolute;
+    width: 500px;
+    left: 70px;
+    font-size: 3rem;
+    letter-spacing: 0.7rem;
+    color: #aaa;
+    animation: showNavText 0.5s ease;
+  }
+  .nav .nav-item4 a i:hover::after {
+    content: "CONTACT";
+    position: absolute;
+    width: 500px;
+    left: 90px;
+    font-size: 3rem;
+    letter-spacing: 0.7rem;
+    color: #aaa;
+    animation: showNavText 0.5s ease;
+  }
+  @keyframes showNavText {
+    0% {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 1199px) {
+  .nav {
+    position: absolute;
+    top: -1rem;
+    left: 5rem;
+    width: 300px;
+    column-gap: 1.5rem;
+    justify-content: center;
+    padding: 1rem 0;
+    border-radius: 10px;
+    background: #eaebf3;
+    box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
+  }
+  @keyframes showNav {
+    0% {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .nav li a i {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    color: purple;
+    animation: showNav 0.5s ease;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .home .slide {
+    background-size: cover;
+    background-position: center;
+  }
+  .container {
+    top: 2rem;
+    bottom: 0;
+    max-width: 50%;
+    margin: 0 0 0 2.5rem;
   }
 }

@@ -15,7 +15,7 @@ let isOpen = false;
 menu.addEventListener("click", () => {
   const navigation = document.querySelector(".nav");
   isOpen = !isOpen;
-  if (isOpen) navigation.style.display = "block";
+  if (isOpen) navigation.style.display = "flex";
   if (!isOpen) navigation.style.display = "none";
 });
 
