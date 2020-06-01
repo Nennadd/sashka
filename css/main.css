@@ -370,10 +370,10 @@ nav {
 @media screen and (max-width: 560px) {
   .nav {
     position: absolute;
-    top: -4.3rem;
-    left: -9rem;
-    width: 80%;
-    height: 13rem;
+    top: -10rem;
+    left: -13rem;
+    width: 90%;
+    height: 20rem;
     /* column-gap: 1.5rem; */
     justify-content: center;
     align-items: flex-start;
