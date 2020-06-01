@@ -21,30 +21,6 @@ h1 {
   font-size: 1.7rem;
 }
 
-/* NOTE MENU !!! */
-/* .nav {
-  display: flex;
-  list-style: none;
-  column-gap: 0.8rem;
-  margin: 0;
-  padding: 0.8rem 1.6rem;
-  justify-content: flex-end;
-}
-.nav li {
-  display: inline-block;
-  width: 6rem;
-  padding: 0.2rem;
-  text-align: center;
-  box-shadow: -2px -2px 4px #fff, 3px 3px 4px #aaa;
-  border-radius: 10px;
-}
-.nav li a {
-  text-decoration: none;
-  color: purple;
-  text-transform: uppercase;
-  font-weight: 700;
-} */
-
 /* NOTE HOME !!! */
 .home {
   position: relative;
@@ -55,7 +31,9 @@ nav {
   position: fixed;
   display: flex;
   top: 1rem;
-  left: 0.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  /* left: 0.5rem; */
   z-index: 11;
   /* background: pink; */
 }
@@ -346,8 +324,8 @@ nav {
   .nav {
     position: absolute;
     top: -1rem;
-    left: 5rem;
-    width: 18rem;
+    left: 6rem;
+    width: 30%;
     /* column-gap: 1.5rem; */
     justify-content: center;
     padding: 1rem 0;
@@ -369,15 +347,16 @@ nav {
     margin: 0 1rem;
   }
   .nav li a i {
-    position: relative;
+    /* position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 35px;
     height: 35px;
     border-radius: 100%;
-    color: purple;
-    animation: showNav 0.5s ease;
+    color: purple; */
+    box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
+    /* animation: showNav 0.5s ease; */
   }
 }
 
