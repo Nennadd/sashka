@@ -396,9 +396,9 @@ nav {
 }
 @media screen and (max-width: 400px) {
   .nav {
-    top: -10rem;
-    left: -10rem;
-    width: 90%;
+    top: -9rem;
+    left: -12rem;
+    width: 100%;
     height: 20rem;
   }
 }
