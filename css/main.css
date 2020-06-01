@@ -347,20 +347,14 @@ nav {
     margin: 0 1rem;
   }
   .nav li a i {
-    /* position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-    color: purple; */
     box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
-    /* animation: showNav 0.5s ease; */
   }
 }
 
 @media screen and (max-width: 560px) {
+  .nav {
+    width: 70%;
+  }
   .home .slide {
     background-size: cover;
     background-position: center;
