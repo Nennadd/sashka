@@ -1,26 +1,4 @@
 /* NOTE WORK !!! */
-/* .work .modal .gallery .thumbs {
-  width: 120px;
-  height: 130px;
-  box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
-  overflow: hidden;
-  animation: showGallery 2s ease;
-  animation-delay: 1s;
-  animation-fill-mode: backwards;
-}
-.work .modal .gallery .thumbs img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-@keyframes showGallery {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
 .work {
   padding: 2rem 0 4rem;
 }
@@ -55,7 +33,6 @@
 .work-img-box {
   width: 100%;
   height: 100%;
-  background: #aaa;
   box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
   overflow: hidden;
 }
@@ -254,6 +231,7 @@
   display: grid;
   row-gap: 0.5rem;
   grid-template-columns: repeat(auto-fit, minmax(40px, 70px));
+  /* grid-template-rows: repeat(auto, minmax(30px, 70px)); */
   padding: 0.5rem 0.5rem 1rem;
   margin: 6rem 0;
   /* box-shadow: -5px -5px 7px #fff, 3px 3px 4px #aaa; */

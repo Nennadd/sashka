@@ -105,8 +105,8 @@ function onScroll() {
   const workCard6 = document.querySelector(".card6");
 
   let height = scrollY;
-  let width = innerWidth;
-  console.log(width);
+  // let width = innerWidth;
+  // console.log(width);
   //  if (width > 560) {
   if (height > 400) aboutImgContainer.classList.add("img-show");
   if (height > 800) workCard1.classList.add("card1-show");
@@ -134,19 +134,34 @@ workButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     // NOTE Show Modal !!!
     modal.classList.add("show-modal");
-
     // NOTE Prevent Scroll !!!
     const body = document.querySelector("body");
     setTimeout(() => {
       body.style.overflow = "hidden";
     }, 1000);
 
-    // NOTE Append Image !!!
-    const img = document.querySelector(`.${e.target.id}`);
-    // console.log(img.getAttribute("src"));
+    const category = e.target.id;
+
+    let data = async function getData() {
+      try {
+        let response = await fetch("data.json");
+        if (response.status !== 200) throw new Error("Fetching problems !!!");
+        let json = await response.text();
+        return JSON.parse(json);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    data().then((response) => {
+      console.log(response);
+    });
   });
 });
 
+// NOTE SOMETHING...
+const thumbs = document.querySelectorAll(".thumb-img");
+
+// NOTE CLOSE MODAL !!!
 const close = document.querySelector(".close-btn");
 close.addEventListener("click", () => {
   modal.classList.add("close");

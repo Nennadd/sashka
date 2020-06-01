@@ -1,0 +1,27 @@
+{
+  "logo": {
+    "logo1": [
+      "images/chakra.jpg",
+      "images/osobica.jpg",
+      "images/glitter.jpg",
+      "images/flower.jpg",
+      "images/chakra.jpg"
+    ],
+    "logo2": [
+      "images/glitter.jpg",
+      "images/chakra.jpg",
+      "images/osobica.jpg",
+      "images/flower.jpg",
+      "images/chakra.jpg"
+    ]
+  },
+  "banners": {
+    "banner1": [
+      "images/chakra.jpg",
+      "images/osobica.jpg",
+      "images/glitter.jpg",
+      "images/flower.jpg",
+      "images/chakra.jpg"
+    ]
+  }
+}
