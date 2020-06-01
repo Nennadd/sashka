@@ -314,3 +314,41 @@ nav {
     margin: 0 0 0 2.5rem;
   }
 }
+.loader-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eaebf3;
+  z-index: 33;
+}
+.loader {
+  width: 6rem;
+  height: 6rem;
+  border: 1rem solid purple;
+  border-radius: 50%;
+  border-top-color: #ddd;
+  border-bottom-color: #ddd;
+  animation: loader 2s linear infinite;
+}
+@keyframes loader {
+  0% {
+    transform: scale(1) rotate(0);
+    border-left-color: purple;
+    border-right-color: purple;
+  }
+  50% {
+    transform: scale(1.2) rotate(-180deg);
+    border-left-color: rgb(231, 15, 231);
+    border-right-color: rgb(231, 15, 231);
+  }
+  100% {
+    transform: scale(1) rotate(-360deg);
+    border-left-color: purple;
+    border-right-color: purple;
+  }
+}

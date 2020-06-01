@@ -3,6 +3,10 @@ formBtn.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader-container");
+  loader.style.display = "none";
+});
 // NOTE NAVIGATION !!!
 const menu = document.querySelector(".menu-btn");
 let isOpen = false;
@@ -141,20 +145,7 @@ workButtons.forEach((button) => {
     }, 1000);
 
     const category = e.target.id;
-
-    let data = async function getData() {
-      try {
-        let response = await fetch("data.json");
-        if (response.status !== 200) throw new Error("Fetching problems !!!");
-        let json = await response.text();
-        return JSON.parse(json);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-    data().then((response) => {
-      console.log(response);
-    });
+    getData(category);
   });
 });
 
@@ -172,3 +163,19 @@ close.addEventListener("click", () => {
   const body = document.querySelector("body");
   body.style.overflow = "";
 });
+
+async function getData(requestedCategory) {
+  try {
+    let response = await fetch("data.json");
+    if (response.status !== 200) throw new Error("Fetching problems !!!");
+    let json = await response.text();
+    let data = JSON.parse(json);
+    renderThumbnails(requestedCategory, data);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+function renderThumbnails(category, data) {
+  console.log(data);
+}
