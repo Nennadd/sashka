@@ -31,6 +31,7 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 1rem;
+  row-gap: 0.5rem;
 }
 input,
 textarea {
@@ -180,7 +181,11 @@ i {
   box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa;
   font-size: 1.04rem;
 }
-
+@media screen and (max-width: 1199px) {
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+}
 @media screen and (max-width: 560px) {
   .contact .contact-box {
     /* display: grid; */
