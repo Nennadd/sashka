@@ -348,7 +348,7 @@ nav {
     top: -1rem;
     left: 5rem;
     width: 18rem;
-    column-gap: 1.5rem;
+    /* column-gap: 1.5rem; */
     justify-content: center;
     padding: 1rem 0;
     border-radius: 10px;
@@ -364,6 +364,9 @@ nav {
       transform: translateX(0);
       opacity: 1;
     }
+  }
+  .nav li {
+    margin: 0 1rem;
   }
   .nav li a i {
     position: relative;
