@@ -342,12 +342,12 @@ nav {
     border-right-color: purple;
   }
   50% {
-    transform: rotate(-180deg);
+    transform: rotate(180deg);
     border-left-color: rgb(231, 15, 231);
     border-right-color: rgb(231, 15, 231);
   }
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
     border-left-color: purple;
     border-right-color: purple;
   }
