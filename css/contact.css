@@ -88,9 +88,6 @@ i {
 .contact form button:active {
   box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
 }
-.contact form button:focus {
-  outline-style: none;
-}
 .email-box {
   display: flex;
   justify-content: center;
@@ -118,7 +115,6 @@ i {
 .email-box-show {
   opacity: 1;
   animation: box-width 1s ease;
-  /* animation-delay: 0.5s; */
   animation-fill-mode: backwards;
 }
 .phone-box-show {
