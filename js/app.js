@@ -4,9 +4,84 @@ window.addEventListener("load", () => {
   LOADER.style.display = "none";
 });
 
+// NOTE FORM
+function SendEmail(name, email, message) {
+  this.name = name;
+  this.email = email;
+  this.message = message;
+  this.errors;
+  this.json;
+  this.validateInputs = () => {
+    try {
+      if (this.name.length === 0) {
+        throw new Error("Name cannot be empty");
+      }
+      if (this.email.length === 0) {
+        throw new Error("Email cannot be empty");
+      }
+      if (this.message.length === 0) {
+        throw new Error("Message cannot be empty");
+      }
+    } catch (error) {
+      this.errors = error.message;
+    }
+
+    this.json = {
+      name: this.name,
+      email: this.email,
+      message: this.message,
+    };
+  };
+  this.showError = () => {
+    console.log(this.errors);
+  };
+  this.sendRequest = () => {
+    // axios({
+    //   method: "POST",
+    //   url: "classes/script.php",
+    //   data: {
+    //     name: this.name,
+    //     email: this.email,
+    //     message: this.message,
+    //   },
+    // }).then((response) => {
+    //   console.log(response.message);
+    // });
+    fetch("classes/script.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(this.json),
+    })
+      .then((response) => {
+        return response.text();
+      })
+      .then((response) => {
+        return JSON.parse(response);
+      })
+      .then((serverResponse) => {
+        // console.log(serverResponse);
+        if (serverResponse.status === "error") {
+          console.log(serverResponse.message);
+        } else {
+          console.log(serverResponse.message);
+        }
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+}
 const formBtn = document.querySelector(".form-btn");
 formBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  const name = document.querySelector("#name").value;
+  const email = document.querySelector("#email").value;
+  const message = document.querySelector("#message").value;
+  let sendMsg = new SendEmail(name, email, message);
+  sendMsg.validateInputs();
+  sendMsg.sendRequest();
 });
 
 // NOTE NAVIGATION !!!
