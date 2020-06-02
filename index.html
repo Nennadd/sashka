@@ -22,16 +22,16 @@
       <nav>
         <button type="button" class="menu-btn">menu</button>
         <ul class="nav">
-          <li class="nav-item1">
+          <li class="nav-item nav-item1">
             <a href="#"><i class="fas fa-home"></i></a>
           </li>
-          <li class="nav-item2">
+          <li class="nav-item nav-item2">
             <a href="#"><i class="fas fa-info"></i></a>
           </li>
-          <li class="nav-item3">
+          <li class="nav-item nav-item3">
             <a href="#"><i class="fas fa-cog"></i></a>
           </li>
-          <li class="nav-item4">
+          <li class="nav-item nav-item4">
             <a href="#"><i class="fas fa-phone"></i></a>
           </li>
         </ul>
@@ -230,6 +230,9 @@
 
     <!-- NOTE CONTACT !!! -->
     <section class="contact">
+      <div class="form-modal">
+        <div class="form-message">Some error message</div>
+      </div>
       <h1>Contact Me <i class="far fa-kiss-wink-heart"></i></h1>
       <div class="contact-box">
         <div class="left-side">
@@ -266,7 +269,9 @@
               ></textarea>
             </div>
             <div style="display: flex;">
-              <button class="form-btn">SEND</button>
+              <button class="form-btn">
+                <span id="btn-spinner">SEND</span>
+              </button>
             </div>
           </form>
         </div>
@@ -295,7 +300,6 @@
     </section>
 
     <script src="js/my-work.js"></script>
-    <script src="js/axios.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

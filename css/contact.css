@@ -3,14 +3,32 @@
   position: relative;
   padding: 2rem 0;
 }
+.form-modal {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 41;
+}
+.form-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 40%;
+  border-radius: 10px;
+  background-color: #eaebf3;
+  font-size: 1.2rem;
+}
 .contact .contact-box {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  /* grid-template-rows: 1fr auto; */
   align-items: center;
-}
-.left-side {
-  /* background: pink; */
 }
 .right-side {
   display: flex;
@@ -19,7 +37,6 @@
   justify-content: space-around;
   align-items: center;
   padding: 5rem 0;
-  /* background: aqua; */
 }
 form {
   display: grid;
@@ -67,15 +84,16 @@ i {
 .input-icon {
   position: absolute;
   left: 0.5rem;
-  top: 0.85rem;
+  top: 0.95rem;
 }
 .textarea-box .input-icon {
-  top: 0.95rem;
+  top: 0.85rem;
 }
 .contact form button {
   display: block;
-  width: 40%;
-  padding: 0.6rem 0;
+  width: 45%;
+  height: 3rem;
+  /* padding: 0.6rem 0; */
   color: rgb(102, 7, 102);
   font-weight: 700;
   letter-spacing: 2px;
@@ -177,6 +195,35 @@ i {
   box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa;
   font-size: 1.04rem;
 }
+.form-spinner {
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 0.4rem solid purple;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotateSpinner 1s linear infinite;
+}
+@keyframes rotateSpinner {
+  0% {
+    transform: rotate(0);
+    border-left-color: purple;
+    border-right-color: purple;
+    border-bottom-color: purple;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-left-color: rgb(231, 15, 231);
+    border-right-color: rgb(231, 15, 231);
+    border-bottom-color: rgb(231, 15, 231);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-left-color: purple;
+    border-right-color: purple;
+    border-bottom-color: purple;
+  }
+}
 @media screen and (max-width: 1199px) {
   .inputs {
     grid-template-columns: 1fr;
@@ -189,12 +236,10 @@ i {
     grid-template-rows: 1fr auto;
     /* align-items: center; */
   }
-  .left-side {
-    /* background: pink; */
-  }
   form {
     width: 80%;
     margin: 1rem auto 0;
+    z-index: 9999;
   }
   .inputs {
     grid-template-columns: 1fr;

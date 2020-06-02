@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $message = (new \Swift_Message('Za Osobicu'))
         ->setFrom(['nennnaddjov@gmail.com' => 'NenadCode'])
         ->setTo(['nenadj372@gmail.com'])
-        ->setBody('Ime: ' . $data['name'] .'<br>' .'Email: ' . $data['email'] .'<br>' . 'Poruka: '.$data['message'], 'text/html')
+        ->setBody('<span style="font-weight:bold;">Ime: </span>' .$data['name'].'<br>' .'<span style="font-weight:bold;">Email: </span>' .$data['email'].'<br>' . '<span style="font-weight:bold;">Poruka: </span>'.$data['message'], 'text/html')
         ;
 
         // Send the message

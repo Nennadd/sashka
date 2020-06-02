@@ -49,7 +49,7 @@ nav {
   box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
   text-transform: uppercase;
   color: purple;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
@@ -325,8 +325,8 @@ nav {
 @media screen and (max-width: 1199px) {
   .nav {
     position: absolute;
-    top: -6rem;
-    left: -13.6rem;
+    top: -5rem;
+    left: -12rem;
     width: 50%;
     height: 13rem;
     justify-content: center;
@@ -354,8 +354,47 @@ nav {
   .nav li a i {
     box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
   }
+  /* .nav .nav-item a i::after {
+    position: absolute;
+    width: 150px;
+    left: 100px;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    color: rgba(128, 0, 128, 0.2);
+  }
+  .nav .nav-item1 a i::after {
+    content: "HOME";
+  }
+  .nav .nav-item2 a i::after {
+    content: "ABOUT";
+  }
+  .nav .nav-item3 a i::after {
+    content: "WORK";
+  }
+  .nav .nav-item4 a i::after {
+    content: "CONTACT";
+  } */
 }
-
+@media screen and (max-width: 960px) {
+  .nav {
+    top: -5rem;
+    left: -10rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .nav {
+    top: -5rem;
+    left: -8rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .nav {
+    top: -5rem;
+    left: -11rem;
+    width: 70%;
+    height: 15rem;
+  }
+}
 @media screen and (max-width: 560px) {
   .nav {
     position: absolute;
@@ -363,14 +402,6 @@ nav {
     left: -13rem;
     width: 90%;
     height: 20rem;
-    /* column-gap: 1.5rem; */
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1rem 0;
-    border-radius: 10px;
-    background: #eaebf3;
-    box-shadow: 4px 4px 4px #fff, -4px -4px 4px #aaa;
-    transform: rotate(135deg);
   }
   .home .slide {
     background-size: cover;
