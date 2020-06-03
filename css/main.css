@@ -423,11 +423,11 @@ nav {
     height: 20rem;
   }
   .home .slide {
-    background-position: center;
+    background-position: bottom;
   }
   .container {
     top: 6rem;
-    left: -2rem;
+    left: 0rem;
     max-width: 50%;
     margin: 0 0 0 2.7rem;
     font-size: 1rem;
