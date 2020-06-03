@@ -4,6 +4,47 @@ window.addEventListener("load", () => {
   LOADER.style.display = "none";
 });
 
+// ********************* NOTE smooth scrolling ************************
+function smoothScroll(link, element, duration) {
+  let target = document.querySelector(element);
+  let targetPosition = target.getBoundingClientRect().top;
+  let startPosition = window.pageYOffset;
+  // let distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    let timeElapsed = currentTime - startTime;
+    var run = ease(timeElapsed, startPosition, targetPosition, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+  requestAnimationFrame(animation);
+}
+let navLink1 = document.querySelector(".nav-link1");
+navLink1.addEventListener("click", function () {
+  smoothScroll(this, ".home", 1000);
+});
+let navLink2 = document.querySelector(".nav-link2");
+navLink2.addEventListener("click", function () {
+  smoothScroll(this, ".about", 1000);
+});
+let navLink3 = document.querySelector(".nav-link3");
+navLink3.addEventListener("click", function () {
+  smoothScroll(this, ".work", 1000);
+});
+let navLink4 = document.querySelector(".nav-link4");
+navLink4.addEventListener("click", function () {
+  smoothScroll(this, ".contact", 1000);
+});
+
 // NOTE NAVIGATION !!!
 const menu = document.querySelector(".menu-btn");
 let isOpen = false;
@@ -13,7 +54,6 @@ menu.addEventListener("click", (e) => {
   if (isOpen) {
     navigation.style.display = "flex";
     e.target.textContent = "CLOSE";
-    e.target.style["color"] = "red";
   }
   if (!isOpen) {
     navigation.style.display = "none";
