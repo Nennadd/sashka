@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   LOADER.style.display = "none";
 });
 
-// ********************* NOTE smooth scrolling ************************
+// ********************* NOTE SMOOTH SCROLLING ************************
 function smoothScroll(link, element, duration) {
   let target = document.querySelector(element);
   let targetPosition = target.getBoundingClientRect().top;
