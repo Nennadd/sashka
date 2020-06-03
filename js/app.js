@@ -171,7 +171,8 @@ close.addEventListener("click", () => {
 // NOTE FORM
 const formModal = document.querySelector(".form-modal");
 const formMessage = document.querySelector(".form-message");
-
+const formBtn = document.querySelector(".form-btn");
+// const spinner = document.querySelector(".form-spinner");
 function SendEmail(name, email, message) {
   this.name = name;
   this.email = email;
@@ -238,8 +239,7 @@ function SendEmail(name, email, message) {
       });
   };
 }
-const formBtn = document.querySelector(".form-btn");
-let spinner = document.getElementById("btn-spinner");
+
 formBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const name = document.querySelector("#name").value;
@@ -256,13 +256,8 @@ formBtn.addEventListener("click", (e) => {
   //   }, 2000);
   // }
   try {
-    // spinner.textContent = "";
-    // spinner.className = "form-spinner";
     sendMsg.sendRequest();
   } catch (error) {
     console.log(error);
-  } finally {
-    // spinner.textContent = "SEND";
-    // spinner.className = "";
   }
 });
