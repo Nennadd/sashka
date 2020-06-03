@@ -169,10 +169,10 @@
 }
 .show-modal {
   display: grid;
-  animation: showModal 1s ease;
+  animation: showModal 0.6s linear;
 }
 .close {
-  animation: close 1s ease;
+  animation: close 0.6s linear;
   /* animation-fill-mode: forwards; */
 }
 @keyframes showModal {

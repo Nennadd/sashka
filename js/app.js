@@ -1,5 +1,4 @@
 const LOADER = document.querySelector(".loader-container");
-
 window.addEventListener("load", () => {
   LOADER.style.display = "none";
 });
@@ -30,19 +29,19 @@ function smoothScroll(link, element, duration) {
 }
 let navLink1 = document.querySelector(".nav-link1");
 navLink1.addEventListener("click", function () {
-  smoothScroll(this, ".home", 1000);
+  smoothScroll(this, ".home", 900);
 });
 let navLink2 = document.querySelector(".nav-link2");
 navLink2.addEventListener("click", function () {
-  smoothScroll(this, ".about", 1000);
+  smoothScroll(this, ".about", 900);
 });
 let navLink3 = document.querySelector(".nav-link3");
 navLink3.addEventListener("click", function () {
-  smoothScroll(this, ".work", 1000);
+  smoothScroll(this, ".work", 900);
 });
 let navLink4 = document.querySelector(".nav-link4");
 navLink4.addEventListener("click", function () {
-  smoothScroll(this, ".contact", 1000);
+  smoothScroll(this, ".contact", 900);
 });
 
 // NOTE NAVIGATION !!!
@@ -140,43 +139,7 @@ function resetTimer() {
   timer = setInterval(autoPlay, 5000);
 }
 
-// NOTE SET ONSCROLL EVENTS !!! ***************************************8
-function onScroll() {
-  const aboutImgContainer = document.querySelector(".img-container");
-  const rightBox = document.querySelector(".phone-box");
-  const leftBox = document.querySelector(".email-box");
-  const buttons = document.querySelectorAll(".icon");
-  const workCard1 = document.querySelector(".card1");
-  const workCard2 = document.querySelector(".card2");
-  const workCard3 = document.querySelector(".card3");
-  const workCard4 = document.querySelector(".card4");
-  const workCard5 = document.querySelector(".card5");
-  const workCard6 = document.querySelector(".card6");
-
-  let height = scrollY;
-  // let width = innerWidth;
-  // console.log(width);
-  //  if (width > 560) {
-  if (height > 400) aboutImgContainer.classList.add("img-show");
-  if (height > 800) workCard1.classList.add("card1-show");
-  if (height > 800) workCard2.classList.add("card2-show");
-  if (height > 800) workCard3.classList.add("card3-show");
-  if (height > 1200) workCard4.classList.add("card1-show");
-  if (height > 1200) workCard5.classList.add("card2-show");
-  if (height > 1200) workCard6.classList.add("card3-show");
-  if (height > 1850) leftBox.classList.add("email-box-show");
-  if (height > 1950) rightBox.classList.add("phone-box-show");
-  if (height > 2050) {
-    buttons.forEach((element) => {
-      element.classList.add("icon-show");
-    });
-  }
-  //  }
-}
-
-window.addEventListener("scroll", onScroll);
-
-// NOTE MY WORK !!!
+// NOTE MY WORK !!!  *********************************************
 modal = document.querySelector(".modal");
 const workButtons = document.querySelectorAll(".work-btn");
 workButtons.forEach((button) => {
@@ -187,12 +150,11 @@ workButtons.forEach((button) => {
     const body = document.querySelector("body");
     setTimeout(() => {
       body.style.overflow = "hidden";
-    }, 1000);
+    }, 600);
 
     const category = e.target.id;
   });
 });
-
 // NOTE CLICK ON THUMBS !!!
 const thumbs = document.querySelectorAll(".thumb-img");
 
@@ -202,17 +164,16 @@ close.addEventListener("click", () => {
   modal.classList.add("close");
   setTimeout(() => {
     modal.className = "modal";
-  }, 1000);
+  }, 600);
 
   const body = document.querySelector("body");
   body.style.overflow = "";
 });
 
-// NOTE FORM
+// NOTE FORM !!!  **************************************************
 const formModal = document.querySelector(".form-modal");
 const formMessage = document.querySelector(".form-message");
 const formBtn = document.querySelector(".form-btn");
-// const spinner = document.querySelector(".form-spinner");
 function SendEmail(name, email, message) {
   this.name = name;
   this.email = email;
@@ -220,29 +181,15 @@ function SendEmail(name, email, message) {
   this.errors;
   this.json;
   this.prepareJson = () => {
-    // try {
-    //   if (this.name.length === 0) {
-    //     throw new Error("Name cannot be empty!");
-    //   }
-    //   if (this.email.length === 0) {
-    //     throw new Error("Email cannot be empty!");
-    //   }
-    //   if (this.message.length === 0) {
-    //     throw new Error("Message cannot be empty!");
-    //   }
-    // } catch (error) {
-    //   this.errors = error.message;
-    // }
-
     this.json = {
       name: this.name,
       email: this.email,
       message: this.message,
     };
   };
-  this.showError = () => {
-    console.log(this.errors);
-  };
+  // this.showError = () => {
+  //   console.log(this.errors);
+  // };
   this.sendRequest = () => {
     fetch("classes/script.php", {
       method: "POST",
@@ -301,3 +248,36 @@ formBtn.addEventListener("click", (e) => {
     console.log(error);
   }
 });
+
+// NOTE SET ONSCROLL EVENTS !!! ***************************************8
+function onScroll() {
+  const aboutImgContainer = document.querySelector(".img-container");
+  const rightBox = document.querySelector(".phone-box");
+  const leftBox = document.querySelector(".email-box");
+  const buttons = document.querySelectorAll(".icon");
+  const workCard1 = document.querySelector(".card1");
+  const workCard2 = document.querySelector(".card2");
+  const workCard3 = document.querySelector(".card3");
+  const workCard4 = document.querySelector(".card4");
+  const workCard5 = document.querySelector(".card5");
+  const workCard6 = document.querySelector(".card6");
+
+  let height = scrollY;
+  // let width = innerWidth;
+  // console.log(width);
+  if (height > 400) aboutImgContainer.classList.add("img-show");
+  if (height > 800) workCard1.classList.add("card1-show");
+  if (height > 800) workCard2.classList.add("card2-show");
+  if (height > 800) workCard3.classList.add("card3-show");
+  if (height > 1200) workCard4.classList.add("card1-show");
+  if (height > 1200) workCard5.classList.add("card2-show");
+  if (height > 1200) workCard6.classList.add("card3-show");
+  if (height > 1850) leftBox.classList.add("email-box-show");
+  if (height > 1950) rightBox.classList.add("phone-box-show");
+  if (height > 2050) {
+    buttons.forEach((element) => {
+      element.classList.add("icon-show");
+    });
+  }
+}
+window.addEventListener("scroll", onScroll);
