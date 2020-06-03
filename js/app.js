@@ -29,19 +29,19 @@ function smoothScroll(link, element, duration) {
 }
 let navLink1 = document.querySelector(".nav-link1");
 navLink1.addEventListener("click", function () {
-  smoothScroll(this, ".home", 900);
+  smoothScroll(this, ".home", 800);
 });
 let navLink2 = document.querySelector(".nav-link2");
 navLink2.addEventListener("click", function () {
-  smoothScroll(this, ".about", 900);
+  smoothScroll(this, ".about", 800);
 });
 let navLink3 = document.querySelector(".nav-link3");
 navLink3.addEventListener("click", function () {
-  smoothScroll(this, ".work", 900);
+  smoothScroll(this, ".work", 800);
 });
 let navLink4 = document.querySelector(".nav-link4");
 navLink4.addEventListener("click", function () {
-  smoothScroll(this, ".contact", 900);
+  smoothScroll(this, ".contact", 800);
 });
 
 // NOTE NAVIGATION !!!
@@ -146,13 +146,14 @@ workButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     // NOTE Show Modal !!!
     modal.classList.add("show-modal");
-    // NOTE Prevent Scroll !!!
+    // NOTE Prevent Body Scroll !!!
     const body = document.querySelector("body");
     setTimeout(() => {
       body.style.overflow = "hidden";
     }, 600);
-
+    // NOTE Get Requested Category !!!
     const category = e.target.id;
+    renderThumbnails(category);
   });
 });
 // NOTE CLICK ON THUMBS !!!
@@ -170,6 +171,15 @@ close.addEventListener("click", () => {
   body.style.overflow = "";
 });
 
+function renderThumbnails(requestedCategory) {
+  let cat;
+  myWork.forEach((element) => {
+    if (element.category === requestedCategory) {
+      console.log(element.thumbnail);
+    }
+  });
+  // console.log(category);
+}
 // NOTE FORM !!!  **************************************************
 const formModal = document.querySelector(".form-modal");
 const formMessage = document.querySelector(".form-message");
@@ -250,28 +260,31 @@ formBtn.addEventListener("click", (e) => {
 });
 
 // NOTE SET ONSCROLL EVENTS !!! ***************************************8
+const aboutImgContainer = document.querySelector(".img-container");
+const rightBox = document.querySelector(".phone-box");
+const leftBox = document.querySelector(".email-box");
+const buttons = document.querySelectorAll(".icon");
+const workCard1 = document.querySelector(".card1");
+const workCard2 = document.querySelector(".card2");
+const workCard3 = document.querySelector(".card3");
+const workCard4 = document.querySelector(".card4");
+const workCard5 = document.querySelector(".card5");
+const workCard6 = document.querySelector(".card6");
 function onScroll() {
-  const aboutImgContainer = document.querySelector(".img-container");
-  const rightBox = document.querySelector(".phone-box");
-  const leftBox = document.querySelector(".email-box");
-  const buttons = document.querySelectorAll(".icon");
-  const workCard1 = document.querySelector(".card1");
-  const workCard2 = document.querySelector(".card2");
-  const workCard3 = document.querySelector(".card3");
-  const workCard4 = document.querySelector(".card4");
-  const workCard5 = document.querySelector(".card5");
-  const workCard6 = document.querySelector(".card6");
-
   let height = scrollY;
   // let width = innerWidth;
   // console.log(width);
   if (height > 400) aboutImgContainer.classList.add("img-show");
-  if (height > 800) workCard1.classList.add("card1-show");
-  if (height > 800) workCard2.classList.add("card2-show");
-  if (height > 800) workCard3.classList.add("card3-show");
-  if (height > 1200) workCard4.classList.add("card1-show");
-  if (height > 1200) workCard5.classList.add("card2-show");
-  if (height > 1200) workCard6.classList.add("card3-show");
+  if (height > 800) {
+    workCard1.classList.add("card1-show");
+    workCard2.classList.add("card2-show");
+    workCard3.classList.add("card3-show");
+  }
+  if (height > 1200) {
+    workCard4.classList.add("card1-show");
+    workCard5.classList.add("card2-show");
+    workCard6.classList.add("card3-show");
+  }
   if (height > 1850) leftBox.classList.add("email-box-show");
   if (height > 1950) rightBox.classList.add("phone-box-show");
   if (height > 2050) {
