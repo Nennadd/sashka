@@ -158,7 +158,10 @@ workButtons.forEach((button) => {
 });
 // NOTE CLICK ON THUMBS !!!
 
+const gallery = document.querySelector(".gallery");
+
 function renderThumbnails(requestedCategory) {
+  gallery.innerHTML = "";
   const thumbs = document.querySelector(".thumbs");
   thumbs.innerHTML = "";
   myWork.forEach((element) => {
@@ -179,10 +182,17 @@ function renderThumbnails(requestedCategory) {
 }
 
 function renderGallery(e) {
-  const gallery = document.querySelector(".gallery");
+  gallery.innerHTML = "";
   myWork.forEach((element) => {
     if (element.thumbnail === e.target.getAttribute("src")) {
-      console.log("sve ok !");
+      let galleryBox = document.createElement("div");
+      galleryBox.className = "gallery-img gallery-img-tall";
+
+      galleryImg = document.createElement("img");
+      galleryImg.setAttribute("src", element.images[0]);
+
+      galleryBox.append(galleryImg);
+      gallery.append(galleryBox);
     }
   });
 

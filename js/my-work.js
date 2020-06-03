@@ -3,7 +3,7 @@ const myWork = [
     category: "logo",
     description: "Shaulina",
     thumbnail: "images/work/logos/saulina/saulina1.jpg",
-    images: ["images/work/logos/saulina/saulina2.jpg"],
+    images: ["images/work/logos/saulina/saulina-kolaz.jpg"],
   },
   {
     category: "logo",
