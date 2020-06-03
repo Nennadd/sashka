@@ -26,6 +26,9 @@ button {
 button:focus {
   outline-style: none;
 }
+img[alt="thumbnail"] {
+  font-size: 0.6rem;
+}
 
 /* NOTE HOME !!! */
 .home {

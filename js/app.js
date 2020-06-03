@@ -157,7 +157,37 @@ workButtons.forEach((button) => {
   });
 });
 // NOTE CLICK ON THUMBS !!!
-const thumbs = document.querySelectorAll(".thumb-img");
+
+function renderThumbnails(requestedCategory) {
+  const thumbs = document.querySelector(".thumbs");
+  thumbs.innerHTML = "";
+  myWork.forEach((element) => {
+    if (element.category === requestedCategory) {
+      let thumb = document.createElement("div");
+      thumb.className = "thumb";
+      let thumbImg = document.createElement("img");
+      thumbImg.setAttribute("src", element.thumbnail);
+      thumbImg.setAttribute("alt", "thumbnail");
+      thumbImg.className = "thumb-img";
+
+      thumbImg.addEventListener("click", renderGallery);
+
+      thumb.append(thumbImg);
+      thumbs.append(thumb);
+    }
+  });
+}
+
+function renderGallery(e) {
+  const gallery = document.querySelector(".gallery");
+  myWork.forEach((element) => {
+    if (element.thumbnail === e.target.getAttribute("src")) {
+      console.log("sve ok !");
+    }
+  });
+
+  // console.log(e.target.getAttribute("src"));
+}
 
 // NOTE CLOSE MODAL !!!
 const close = document.querySelector(".close-btn");
@@ -171,15 +201,6 @@ close.addEventListener("click", () => {
   body.style.overflow = "";
 });
 
-function renderThumbnails(requestedCategory) {
-  let cat;
-  myWork.forEach((element) => {
-    if (element.category === requestedCategory) {
-      console.log(element.thumbnail);
-    }
-  });
-  // console.log(category);
-}
 // NOTE FORM !!!  **************************************************
 const formModal = document.querySelector(".form-modal");
 const formMessage = document.querySelector(".form-message");
