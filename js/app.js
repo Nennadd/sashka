@@ -190,13 +190,27 @@ function renderGallery(e) {
 
       galleryImg = document.createElement("img");
       galleryImg.setAttribute("src", element.images[0]);
+      galleryImg.addEventListener("click", showGalleryImage);
 
       galleryBox.append(galleryImg);
       gallery.append(galleryBox);
     }
   });
+}
 
-  // console.log(e.target.getAttribute("src"));
+function showGalleryImage(e) {
+  const galleryModal = document.querySelector(".gallery-modal");
+  galleryModal.innerHTML = "";
+  let src = e.target.getAttribute("src");
+  const img = document.createElement("img");
+  img.setAttribute("src", src);
+
+  galleryModal.style.display = "flex";
+  galleryModal.append(img);
+  galleryModal.addEventListener("click", (e) => {
+    e.stopPropagation();
+    e.target.style.display = "none";
+  });
 }
 
 // NOTE CLOSE MODAL !!!
@@ -326,21 +340,21 @@ function onScroll() {
 }
 window.addEventListener("scroll", onScroll);
 
-function renderSpots() {
-  let spot = document.createElement("span");
-  spot.className = "spot";
-  let spotTop = Math.floor(Math.random() * 100);
-  let spotLeft = Math.floor(Math.random() * 100);
+// function renderSpots() {
+//   let spot = document.createElement("span");
+//   spot.className = "spot";
+//   let spotTop = Math.floor(Math.random() * 100);
+//   let spotLeft = Math.floor(Math.random() * 100);
 
-  spot.style.top = spotTop + "%";
-  spot.style.left = spotLeft + "%";
-  setTimeout(() => {
-    spot.className = "";
-  }, 3000);
+//   spot.style.top = spotTop + "%";
+//   spot.style.left = spotLeft + "%";
+//   setTimeout(() => {
+//     spot.className = "";
+//   }, 5000);
 
-  gallery.append(spot);
-}
+//   gallery.append(spot);
+// }
 
-setInterval(() => {
-  renderSpots();
-}, 1000);
+// setInterval(() => {
+//   renderSpots();
+// }, 1000);
