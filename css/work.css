@@ -255,7 +255,7 @@
   display: none;
   grid-template-columns: repeat(3, minmax(auto, 1fr));
   width: 75%;
-  /* min-height: 80%; */
+  min-height: 90vh;
   grid-template-rows: auto;
   justify-content: center;
   align-items: center;
@@ -263,6 +263,16 @@
   padding: 1rem;
   margin: auto;
   box-shadow: -7px -7px 10px #fff, 7px 7px 10px #aaa;
+  animation: galleryOpacity 1s linear;
+  animation-fill-mode: backwards;
+}
+@keyframes galleryOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .work .modal .gallery-box .gallery .gallery-img {
   display: flex;

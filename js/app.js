@@ -161,6 +161,7 @@ workButtons.forEach((button) => {
 const gallery = document.querySelector(".gallery");
 
 function renderThumbnails(requestedCategory) {
+  gallery.style.display = "none";
   gallery.innerHTML = "";
   const thumbs = document.querySelector(".thumbs");
   thumbs.innerHTML = "";
