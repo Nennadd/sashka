@@ -250,23 +250,13 @@
   align-items: center;
   padding: 1rem;
   overflow: auto;
-  animation: showGallery 1.5s ease;
-  animation-delay: 1.5s;
-  animation-fill-mode: backwards;
-}
-@keyframes showGallery {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 .work .modal .gallery-box .gallery {
   display: none;
   grid-template-columns: repeat(3, minmax(auto, 1fr));
   width: 75%;
-  grid-auto-rows: auto;
+  /* min-height: 80%; */
+  grid-template-rows: auto;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -288,6 +278,9 @@
   overflow: hidden;
   /* text-align: center; */
   z-index: 3;
+  animation: showGallery 1s ease;
+  /* animation-delay: 1.5s; */
+  animation-fill-mode: backwards;
 }
 .work .modal .gallery-box .gallery .gallery-img img {
   display: flex;
@@ -296,6 +289,14 @@
   max-width: 100%;
   height: auto;
   cursor: pointer;
+}
+@keyframes showGallery {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .spot {
   position: absolute;
