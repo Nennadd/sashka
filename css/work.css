@@ -169,15 +169,16 @@
 }
 .work .modal .gallery-box {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
   overflow: auto;
 }
-.work .modal .gallery-box h2 {
+/* .work .modal .gallery-box h2 {
   color: purple;
-}
+  margin: 0;
+} */
 .work .modal .gallery-box .gallery {
   display: none;
   grid-template-columns: repeat(3, minmax(auto, 1fr));
@@ -259,7 +260,7 @@
   z-index: 51;
 }
 .gallery-modal img {
-  max-width: 80%;
+  max-width: 90%;
   height: auto;
   z-index: 51;
   opacity: 1;

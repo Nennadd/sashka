@@ -157,7 +157,7 @@ workButtons.forEach((button) => {
   });
 });
 
-const galleryContainer = document.querySelector(".gallery-box");
+// const galleryContainer = document.querySelector(".gallery-box");
 const gallery = document.querySelector(".gallery");
 
 function renderThumbnails(requestedCategory) {
@@ -183,13 +183,13 @@ function renderThumbnails(requestedCategory) {
 }
 
 function renderGallery(e) {
-  galleryContainer.removeChild(galleryContainer.childNodes[0]);
+  // galleryContainer.removeChild(galleryContainer.childNodes[0]);
   gallery.style.display = "grid";
   gallery.innerHTML = "";
   myWork.forEach((element) => {
     if (element.thumbnail === e.target.getAttribute("src")) {
-      const description = document.createElement("h2");
-      description.textContent = element.description;
+      // const description = document.createElement("h2");
+      // description.textContent = element.description;
       element.images.forEach((image) => {
         let imgDiv = document.createElement("div");
         imgDiv.className = "gallery-img";
@@ -197,7 +197,7 @@ function renderGallery(e) {
         galleryImg = document.createElement("img");
         galleryImg.setAttribute("src", image);
         galleryImg.addEventListener("click", showGalleryImage);
-        galleryContainer.prepend(description);
+        // galleryContainer.prepend(description);
         imgDiv.append(galleryImg);
         gallery.append(imgDiv);
       });
