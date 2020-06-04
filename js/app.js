@@ -320,8 +320,8 @@ const workCard5 = document.querySelector(".card5");
 const workCard6 = document.querySelector(".card6");
 function onScroll() {
   let height = scrollY;
-  // let width = innerWidth;
-  // console.log(width);
+  let width = innerWidth;
+  console.log(width);
   if (height > 400) aboutImgContainer.classList.add("img-show");
   if (height > 800) {
     workCard1.classList.add("card1-show");
