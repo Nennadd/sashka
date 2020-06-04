@@ -156,7 +156,6 @@ workButtons.forEach((button) => {
     renderThumbnails(category);
   });
 });
-// NOTE CLICK ON THUMBS !!!
 
 const gallery = document.querySelector(".gallery");
 
@@ -193,7 +192,7 @@ function renderGallery(e) {
 
         galleryImg = document.createElement("img");
         galleryImg.setAttribute("src", image);
-        // galleryImg.addEventListener("click", showGalleryImage);
+        galleryImg.addEventListener("click", showGalleryImage);
         imgDiv.append(galleryImg);
         gallery.append(imgDiv);
       });
@@ -201,20 +200,22 @@ function renderGallery(e) {
   });
 }
 
-// function showGalleryImage(e) {
-//   const galleryModal = document.querySelector(".gallery-modal");
-//   galleryModal.innerHTML = "";
-//   let src = e.target.getAttribute("src");
-//   const img = document.createElement("img");
-//   img.setAttribute("src", src);
+function showGalleryImage(e) {
+  const galleryModal = document.querySelector(".gallery-modal");
+  galleryModal.innerHTML = "";
+  let src = e.target.getAttribute("src");
+  const img = document.createElement("img");
+  img.setAttribute("src", src);
+  img.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
 
-//   galleryModal.style.display = "flex";
-//   galleryModal.append(img);
-//   galleryModal.addEventListener("click", (e) => {
-//     e.stopPropagation();
-//     e.target.style.display = "none";
-//   });
-// }
+  galleryModal.style.display = "flex";
+  galleryModal.append(img);
+  galleryModal.addEventListener("click", (e) => {
+    e.target.style.display = "none";
+  });
+}
 
 // NOTE CLOSE MODAL !!!
 const close = document.querySelector(".close-btn");

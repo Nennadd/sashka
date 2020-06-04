@@ -366,26 +366,6 @@ nav {
   .nav li a i {
     box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
   }
-  /* .nav .nav-item a i::after {
-    position: absolute;
-    width: 150px;
-    left: 100px;
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-    color: rgba(128, 0, 128, 0.2);
-  }
-  .nav .nav-item1 a i::after {
-    content: "HOME";
-  }
-  .nav .nav-item2 a i::after {
-    content: "ABOUT";
-  }
-  .nav .nav-item3 a i::after {
-    content: "WORK";
-  }
-  .nav .nav-item4 a i::after {
-    content: "CONTACT";
-  } */
 }
 @media screen and (max-width: 960px) {
   .nav {

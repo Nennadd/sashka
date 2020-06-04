@@ -258,6 +258,8 @@
   max-width: 850px;
   height: auto;
   z-index: 51;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 @media screen and (min-width: 560px) {
   .work .modal .gallery-box .gallery .gallery-img-tall {
