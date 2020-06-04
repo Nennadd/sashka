@@ -169,10 +169,14 @@
 }
 .work .modal .gallery-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
   overflow: auto;
+}
+.work .modal .gallery-box h2 {
+  color: purple;
 }
 .work .modal .gallery-box .gallery {
   display: none;
@@ -255,7 +259,7 @@
   z-index: 51;
 }
 .gallery-modal img {
-  max-width: 850px;
+  max-width: 80%;
   height: auto;
   z-index: 51;
   opacity: 1;
