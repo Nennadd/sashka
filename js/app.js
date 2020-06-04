@@ -182,36 +182,38 @@ function renderThumbnails(requestedCategory) {
 }
 
 function renderGallery(e) {
+  gallery.style.display = "grid";
   gallery.innerHTML = "";
   myWork.forEach((element) => {
     if (element.thumbnail === e.target.getAttribute("src")) {
-      let galleryBox = document.createElement("div");
-      galleryBox.className = "gallery-img";
+      element.images.forEach((image) => {
+        let imgDiv = document.createElement("div");
+        imgDiv.className = "gallery-img";
 
-      galleryImg = document.createElement("img");
-      galleryImg.setAttribute("src", element.images[0]);
-      galleryImg.addEventListener("click", showGalleryImage);
-
-      galleryBox.append(galleryImg);
-      gallery.append(galleryBox);
+        galleryImg = document.createElement("img");
+        galleryImg.setAttribute("src", image);
+        // galleryImg.addEventListener("click", showGalleryImage);
+        imgDiv.append(galleryImg);
+        gallery.append(imgDiv);
+      });
     }
   });
 }
 
-function showGalleryImage(e) {
-  const galleryModal = document.querySelector(".gallery-modal");
-  galleryModal.innerHTML = "";
-  let src = e.target.getAttribute("src");
-  const img = document.createElement("img");
-  img.setAttribute("src", src);
+// function showGalleryImage(e) {
+//   const galleryModal = document.querySelector(".gallery-modal");
+//   galleryModal.innerHTML = "";
+//   let src = e.target.getAttribute("src");
+//   const img = document.createElement("img");
+//   img.setAttribute("src", src);
 
-  galleryModal.style.display = "flex";
-  galleryModal.append(img);
-  galleryModal.addEventListener("click", (e) => {
-    e.stopPropagation();
-    e.target.style.display = "none";
-  });
-}
+//   galleryModal.style.display = "flex";
+//   galleryModal.append(img);
+//   galleryModal.addEventListener("click", (e) => {
+//     e.stopPropagation();
+//     e.target.style.display = "none";
+//   });
+// }
 
 // NOTE CLOSE MODAL !!!
 const close = document.querySelector(".close-btn");

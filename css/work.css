@@ -248,7 +248,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   overflow: auto;
   animation: showGallery 1.5s ease;
   animation-delay: 1.5s;
@@ -263,30 +263,39 @@
   }
 }
 .work .modal .gallery-box .gallery {
-  display: flex;
-  /* grid-template-columns: repeat(1, minmax(150px, 800px)); */
-  /* grid-auto-rows: auto; */
+  display: none;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  width: 75%;
+  grid-auto-rows: auto;
   justify-content: center;
   align-items: center;
-  /* gap: 0.5rem; */
+  gap: 1rem;
   padding: 1rem;
-  /* margin: auto; */
-  /* box-shadow: -7px -7px 10px #fff, 7px 7px 10px #aaa; */
+  margin: auto;
+  box-shadow: -7px -7px 10px #fff, 7px 7px 10px #aaa;
 }
 .work .modal .gallery-box .gallery .gallery-img {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 70%;
+  align-self: center;
+  width: 100%;
   /* box-shadow: inset 4px 4px 10px #aaa, inset -4px -4px 10px #fff; */
   box-shadow: -7px -7px 10px #fff, 9px 9px 12px #aaa;
-  padding: 1rem;
+  /* padding: 1rem; */
   border-radius: 11px;
   transition: all 500ms;
   overflow: hidden;
-  text-align: center;
+  /* text-align: center; */
   z-index: 3;
+}
+.work .modal .gallery-box .gallery .gallery-img img {
+  display: flex;
+  /* align-self: baseline; */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
 }
 .spot {
   position: absolute;
@@ -309,15 +318,6 @@
     display: none;
   }
 }
-
-.work .modal .gallery-box .gallery .gallery-img img {
-  display: flex;
-  /* align-self: baseline; */
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  cursor: pointer;
-}
 .gallery-modal {
   position: fixed;
   display: none;
@@ -339,8 +339,8 @@
 }
 @media screen and (min-width: 560px) {
   .work .modal .gallery-box .gallery .gallery-img-tall {
-    /* grid-row: span 2 / auto;
-    grid-column: span 2 / auto; */
+    grid-row: span 2 / auto;
+    grid-column: span 2 / auto;
   }
 }
 @media screen and (max-width: 960px) {
