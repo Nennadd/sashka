@@ -340,21 +340,22 @@ function onScroll() {
 }
 window.addEventListener("scroll", onScroll);
 
-// function renderSpots() {
-//   let spot = document.createElement("span");
-//   spot.className = "spot";
-//   let spotTop = Math.floor(Math.random() * 100);
-//   let spotLeft = Math.floor(Math.random() * 100);
+function renderSpots() {
+  galleryModal = document.querySelector(".gallery-modal");
+  let spot = document.createElement("span");
+  spot.className = "spot";
+  let spotTop = Math.floor(Math.random() * 100);
+  let spotLeft = Math.floor(Math.random() * 100);
 
-//   spot.style.top = spotTop + "%";
-//   spot.style.left = spotLeft + "%";
-//   setTimeout(() => {
-//     spot.className = "";
-//   }, 5000);
+  spot.style.top = spotTop + "%";
+  spot.style.left = spotLeft + "%";
+  setTimeout(() => {
+    spot.className = "";
+  }, 5000);
 
-//   gallery.append(spot);
-// }
+  galleryModal.append(spot);
+}
 
-// setInterval(() => {
-//   renderSpots();
-// }, 1000);
+setInterval(() => {
+  renderSpots();
+}, 500);
