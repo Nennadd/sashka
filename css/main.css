@@ -3,6 +3,13 @@
   box-sizing: border-box;
   color: rgb(54, 2, 54);
   font-size: calc(12px + (21 - 13) * ((100vw - 320px) / (1600 - 320)));
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 body {
   font-family: "Poppins", sans-serif;

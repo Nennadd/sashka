@@ -350,6 +350,7 @@ function onScroll() {
 window.addEventListener("scroll", onScroll);
 
 function renderSpots() {
+  removeInterval();
   galleryModal = document.querySelector(".gallery-modal");
   let spot = document.createElement("span");
   spot.className = "spot";
@@ -365,6 +366,9 @@ function renderSpots() {
   galleryModal.append(spot);
 }
 
-setInterval(() => {
-  renderSpots();
-}, 500);
+let spotInterval = setInterval(renderSpots, 300);
+
+function removeInterval() {
+  clearInterval(spotInterval);
+  spotInterval = setInterval(renderSpots, 300);
+}
