@@ -186,7 +186,7 @@ function renderGallery(e) {
   myWork.forEach((element) => {
     if (element.thumbnail === e.target.getAttribute("src")) {
       let galleryBox = document.createElement("div");
-      galleryBox.className = "gallery-img gallery-img-tall";
+      galleryBox.className = "gallery-img";
 
       galleryImg = document.createElement("img");
       galleryImg.setAttribute("src", element.images[0]);
@@ -325,3 +325,22 @@ function onScroll() {
   }
 }
 window.addEventListener("scroll", onScroll);
+
+function renderSpots() {
+  let spot = document.createElement("span");
+  spot.className = "spot";
+  let spotTop = Math.floor(Math.random() * 100);
+  let spotLeft = Math.floor(Math.random() * 100);
+
+  spot.style.top = spotTop + "%";
+  spot.style.left = spotLeft + "%";
+  setTimeout(() => {
+    spot.className = "";
+  }, 3000);
+
+  gallery.append(spot);
+}
+
+setInterval(() => {
+  renderSpots();
+}, 1000);
