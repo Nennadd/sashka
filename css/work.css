@@ -254,42 +254,30 @@
 .work .modal .gallery-box .gallery {
   display: none;
   grid-template-columns: repeat(3, minmax(auto, 1fr));
-  width: 75%;
-  min-height: 90vh;
   grid-template-rows: auto;
+  width: 70%;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
   margin: auto;
-  box-shadow: -7px -7px 10px #fff, 7px 7px 10px #aaa;
-  animation: galleryOpacity 1s linear;
-  animation-fill-mode: backwards;
-}
-@keyframes galleryOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .work .modal .gallery-box .gallery .gallery-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: center;
+  /* align-self: center; */
   width: 100%;
-  /* box-shadow: inset 4px 4px 10px #aaa, inset -4px -4px 10px #fff; */
-  box-shadow: -7px -7px 10px #fff, 9px 9px 12px #aaa;
+  box-shadow: -4px -4px 7px #fff, 4px 4px 7px #aaa;
   /* padding: 1rem; */
   border-radius: 11px;
   transition: all 500ms;
   overflow: hidden;
-  /* text-align: center; */
   z-index: 3;
-  animation: showGallery 1s ease;
-  /* animation-delay: 1.5s; */
+  animation: showGallery 1.5s ease;
+  animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
 .work .modal .gallery-box .gallery .gallery-img img {
@@ -356,7 +344,8 @@
 }
 @media screen and (max-width: 960px) {
   .work .modal .gallery-box .gallery {
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    width: 70%;
   }
   .work .modal .modal-left .thumbs {
     margin: 7rem 0;
@@ -364,15 +353,16 @@
 }
 @media screen and (max-width: 800px) {
   .work .modal .gallery-box .gallery {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
   }
   .work .modal .modal-left {
     overflow-y: auto;
   }
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
   .work .modal .gallery-box .gallery {
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+    width: 80%;
   }
   .work .modal .modal-left .thumbs {
     margin: 8rem 0;
