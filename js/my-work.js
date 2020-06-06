@@ -28,8 +28,8 @@ const myWork = [
   {
     category: "banners",
     description: "something",
-    thumbnail: "banners thumbnail",
-    images: [],
+    thumbnail: "images/work/banner.png",
+    images: ["images/work/banners/ita/banner-ita.jpg"],
   },
   {
     category: "mockups",

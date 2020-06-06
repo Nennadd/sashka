@@ -373,11 +373,9 @@
   .work {
     padding: 1rem;
   }
-  /* .work-wrapper {
-    grid-template-columns: auto;
-    width: 80%;
-    margin: 0 auto;
-  } */
+  .work-card {
+    padding: 0 0 1rem 0;
+  }
   .work-card p {
     font-size: 1.1rem;
     letter-spacing: 1px;

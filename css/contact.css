@@ -240,6 +240,9 @@ i {
     grid-template-rows: 1fr auto;
     /* align-items: center; */
   }
+  .right-side {
+    padding: 1rem;
+  }
   .inputs {
     grid-template-columns: 1fr;
     row-gap: 1rem;
@@ -261,8 +264,8 @@ i {
     z-index: 9999;
   }
 
-  .contact form button {
-    width: 50%;
+  .contact form .form-btn {
+    width: 60%;
     padding: 0.7rem 0;
     letter-spacing: 3px;
     font-size: 1.1rem;
