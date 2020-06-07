@@ -193,6 +193,19 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
+.work .modal .gallery-box .gallery-tall {
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 .work .modal .gallery-box .gallery .gallery-img {
   display: flex;
   flex-direction: column;
@@ -212,6 +225,13 @@
 .work .modal .gallery-box .gallery .gallery-img img {
   display: flex;
   /* align-self: baseline; */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+.gallery-tall img {
+  display: flex;
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -261,7 +281,7 @@
   z-index: 51;
 }
 .gallery-modal img {
-  max-width: 90%;
+  max-width: 50%;
   height: auto;
   z-index: 51;
   opacity: 1;

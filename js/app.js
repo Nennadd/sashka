@@ -183,7 +183,6 @@ function renderThumbnails(requestedCategory) {
 }
 
 function renderGallery(e) {
-  // galleryContainer.removeChild(galleryContainer.childNodes[0]);
   gallery.style.display = "grid";
   gallery.innerHTML = "";
   myWork.forEach((element) => {
@@ -192,8 +191,14 @@ function renderGallery(e) {
       // description.textContent = element.description;
       element.images.forEach((image) => {
         let imgDiv = document.createElement("div");
+        if (element.category === "banners") {
+          gallery.classList.add("gallery-tall");
+        } else {
+          if (gallery.classList.contains("gallery-tall")) {
+            gallery.classList.remove("gallery-tall");
+          }
+        }
         imgDiv.className = "gallery-img";
-
         galleryImg = document.createElement("img");
         galleryImg.setAttribute("src", image);
         galleryImg.addEventListener("click", showGalleryImage);
