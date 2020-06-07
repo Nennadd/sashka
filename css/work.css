@@ -295,6 +295,20 @@
     grid-column: span 2 / auto;
   }
 } */
+@media screen and (min-width: 1200px) {
+  .work-wrapper {
+    grid-template-columns: repeat(3, minmax(150px, 310px));
+  }
+  .work .work-card {
+    padding: 0.3rem;
+  }
+  .work-card button {
+    font-size: 0.7rem;
+  }
+  .work .modal .modal-left .close-btn {
+    font-size: 0.6rem;
+  }
+}
 @media screen and (min-width: 960px) {
   .work .work-wrapper .card1 {
     opacity: 0;
