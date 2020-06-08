@@ -267,10 +267,12 @@ nav {
     border-right-color: purple;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
   .home .menu-btn {
     font-size: 0.6rem;
   }
+}
+@media screen and (min-width: 1200px) {
   .nav li {
     position: absolute;
   }

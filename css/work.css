@@ -295,7 +295,7 @@
     grid-column: span 2 / auto;
   }
 } */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
   .work-wrapper {
     grid-template-columns: repeat(3, minmax(150px, 310px));
   }
