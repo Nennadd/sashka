@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+:root {
+  --darkPurple: rgb(102, 7, 102);
+  --lightPurple: rgb(189, 15, 189);
+}
 * {
   box-sizing: border-box;
   color: rgb(54, 2, 54);
@@ -14,15 +18,15 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #eaebf3;
-  color: rgb(102, 7, 102);
+  /* color: var(--darkPurple); */
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
-h1 {
+h2 {
   text-align: center;
   margin-top: 0.6rem;
-  color: rgb(102, 7, 102);
+  color: var(--darkPurple);
   word-spacing: 0.3rem;
   letter-spacing: 1px;
   font-size: 1.7rem;
@@ -58,7 +62,7 @@ nav {
   border-radius: 100%;
   box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
   text-transform: uppercase;
-  color: purple;
+  color: var(--darkPurple);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -85,7 +89,7 @@ nav {
   height: 35px;
   border-radius: 100%;
   box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
-  color: purple;
+  color: var(--darkPurple);
   background-color: #eaebf3;
   animation: showNav 0.5s ease;
 }
@@ -151,7 +155,7 @@ nav {
 .home .caption h1 {
   font-size: 2.5rem;
   text-align: unset;
-  color: rgb(163, 56, 127);
+  color: var(--darkPurple);
   margin: 0;
 }
 .home .active .caption h1 {
@@ -161,7 +165,7 @@ nav {
 }
 .home .caption p {
   font-size: 1rem;
-  color: rgb(180, 120, 165);
+  color: var(--lightPurple);
 }
 .home .active .caption p {
   opacity: 0;
@@ -186,7 +190,7 @@ nav {
   height: 40px;
   margin-top: -20px;
   color: #fff;
-  background: purple;
+  background: var(--darkPurple);
   text-align: center;
   line-height: 40px;
   font-size: 1.2rem;
@@ -220,7 +224,7 @@ nav {
   line-height: 1.7rem;
   background: #eaebf3;
   border-radius: 100%;
-  color: purple;
+  color: var(--darkPurple);
   box-shadow: inset -3px -3px 3px #fff, inset 2px 2px 3px #aaa;
   cursor: pointer;
 }
@@ -244,7 +248,7 @@ nav {
 .loader {
   width: 6rem;
   height: 6rem;
-  border: 1rem solid purple;
+  border: 1rem solid var(--darkPurple);
   border-radius: 50%;
   border-top-color: #ddd;
   border-bottom-color: #ddd;
@@ -253,18 +257,18 @@ nav {
 @keyframes loader {
   0% {
     transform: rotate(0);
-    border-left-color: purple;
-    border-right-color: purple;
+    border-left-color: var(--darkPurple);
+    border-right-color: var(--darkPurple);
   }
   50% {
     transform: rotate(180deg);
-    border-left-color: rgb(231, 15, 231);
-    border-right-color: rgb(231, 15, 231);
+    border-left-color: var(--lightPurple);
+    border-right-color: var(--lightPurple);
   }
   100% {
     transform: rotate(360deg);
-    border-left-color: purple;
-    border-right-color: purple;
+    border-left-color: var(--darkPurple);
+    border-right-color: var(--darkPurple);
   }
 }
 @media screen and (min-width: 1400px) {
@@ -309,7 +313,7 @@ nav {
     content: "ABOUT ME";
     position: absolute;
     width: 500px;
-    left: 70px;
+1    left: 70px;
     font-size: 3rem;
     letter-spacing: 0.7rem;
     color: #aaa;

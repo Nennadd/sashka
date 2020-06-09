@@ -1,35 +1,27 @@
 /* NOTE ABOUT !!! */
 .about {
-  padding: 2rem 2rem;
+  padding: 3rem 2rem 2rem 2rem;
 }
 .about-wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto;
+  grid-template-columns: 1fr 1.5fr;
+  /* grid-template-rows: auto; */
+  justify-content: center;
+  align-items: flex-start;
 }
 .about-left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  width: 100%;
   align-items: center;
-  row-gap: 1rem;
+  /* row-gap: 1rem; */
   padding: 1rem;
-}
-.about-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  /* border-left: 0.3rem solid purple; */
-}
-.about-right p {
-  text-align: justify;
 }
 .img-container {
   position: relative;
-  width: 270px;
-  height: 270px;
+  width: 320px;
+  height: 320px;
   padding: 20px;
   box-shadow: -5px -5px 7px #fff, 5px 5px 7px #aaa;
   opacity: 0;
@@ -73,12 +65,52 @@
 .about .img-box img:hover {
   transform: scale(1.05);
 }
-.about-left span {
+.social-icons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  column-gap: 1rem;
+  padding: 1rem;
+}
+.social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
+}
+/* .about-left span {
   display: block;
   font-size: 0.85rem;
   text-align: center;
+} */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  /* border-left: 0.3rem solid purple; */
 }
-
+.about p {
+  color: #111;
+  margin: 0.5rem 0;
+  text-align: justify;
+  font-size: 0.95rem;
+  letter-spacing: 0.05rem;
+}
+.about p:first-child {
+  margin-top: 0;
+}
+.about a {
+  text-decoration: none;
+  color: var(--darkPurple);
+}
+.about a:hover {
+  color: var(--lightPurple);
+}
 @media screen and (max-width: 560px) {
   .about-wrapper {
     display: grid;
