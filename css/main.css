@@ -119,10 +119,10 @@ nav {
   animation: slide 1s ease;
 }
 .home .slide1 {
-  background-image: url("../images/02Girl.png");
+  background-image: url("../images/ja.png");
 }
 .home .slide2 {
-  background-image: url("../images/01Girl.png");
+  background-image: url("../images/02Girl.png");
 }
 .home .slide3 {
   background-image: url("../images/03Girl.png");
@@ -432,10 +432,10 @@ nav {
     font-size: 2rem;
   }
   .home .slide1 {
-    background-image: url("../images/girl2.png");
+    background-image: url("../images/ja.png");
   }
   .home .slide2 {
-    background-image: url("../images/girl1.png");
+    background-image: url("../images/girl2.png");
   }
   .home .slide3 {
     background-image: url("../images/girl3.png");

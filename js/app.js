@@ -278,16 +278,23 @@ function SendEmail(name, email, message) {
           formModal.style.display = "flex";
           formMessage.textContent = serverResponse.message;
           formMessage.style["color"] = "red";
+
           setTimeout(() => {
             formModal.style.display = "none";
           }, 2000);
+          return false;
         } else {
           formModal.style.display = "flex";
           formMessage.textContent = serverResponse.message;
           formMessage.style["color"] = "green";
+
           setTimeout(() => {
             formModal.style.display = "none";
+            document.querySelector("#name").value = "";
+            document.querySelector("#email").value = "";
+            document.querySelector("#message").value = "";
           }, 3000);
+          return true;
         }
       })
       .catch((err) => {
