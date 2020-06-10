@@ -283,7 +283,7 @@
   z-index: 51;
 }
 .gallery-modal img {
-  max-width: 60%;
+  max-width: 50%;
   height: auto;
   z-index: 51;
   opacity: 1;
