@@ -154,6 +154,7 @@ workButtons.forEach((button) => {
     // NOTE Get Requested Category !!!
     const category = e.target.id;
     renderThumbnails(category);
+    showFirstGallery(category);
   });
 });
 
@@ -183,12 +184,11 @@ function renderThumbnails(requestedCategory) {
 }
 
 function renderGallery(e) {
+  // console.log(e);
   gallery.style.display = "grid";
   gallery.innerHTML = "";
   myWork.forEach((element) => {
     if (element.thumbnail === e.target.getAttribute("src")) {
-      // const description = document.createElement("h2");
-      // description.textContent = element.description;
       element.images.forEach((image) => {
         let imgDiv = document.createElement("div");
         if (element.category === "banners") {
@@ -207,6 +207,33 @@ function renderGallery(e) {
         gallery.append(imgDiv);
       });
     }
+  });
+}
+
+function showFirstGallery(category) {
+  let categoryArray = [];
+  myWork.forEach((element) => {
+    if (element.category === category) {
+      categoryArray.push(element);
+    }
+  });
+  const firstItem = categoryArray[0];
+  gallery.style.display = "grid";
+  firstItem.images.forEach((image) => {
+    let imgDiv = document.createElement("div");
+    if (firstItem.category === "banners") {
+      gallery.classList.add("gallery-tall");
+    } else {
+      if (gallery.classList.contains("gallery-tall")) {
+        gallery.classList.remove("gallery-tall");
+      }
+    }
+    imgDiv.className = "gallery-img";
+    galleryImg = document.createElement("img");
+    galleryImg.setAttribute("src", image);
+    galleryImg.addEventListener("click", showGalleryImage);
+    imgDiv.append(galleryImg);
+    gallery.append(imgDiv);
   });
 }
 

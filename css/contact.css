@@ -118,31 +118,27 @@ i {
 .contact form button:active {
   box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
 }
-.email-box {
+.email-box,
+.phone-box {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
   height: 3rem;
-  width: 85%;
-  box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
-  /* background-color: rgba(128, 3, 128, 0.8); */
+  box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa;
   opacity: 0;
+}
+.email-box {
+  width: 85%;
+}
+.phone-box {
+  width: 80%;
 }
 .email-box span,
 .phone-box span {
   font-size: 0.85rem;
   color: var(--lightPurple);
 }
-.phone-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem;
-  width: 80%;
-  box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
-  opacity: 0;
-}
-
 .email-box-show {
   opacity: 1;
   animation: box-width 1s ease;
