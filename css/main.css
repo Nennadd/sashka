@@ -2,6 +2,7 @@
 :root {
   --darkPurple: rgb(102, 7, 102);
   --lightPurple: rgb(189, 15, 189);
+  --bgColor: #eaebf3;
 }
 * {
   box-sizing: border-box;
