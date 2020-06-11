@@ -260,7 +260,7 @@ i {
     row-gap: 1rem;
   }
   .phone-box {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
   }
 }
 @media screen and (max-width: 600px) {
