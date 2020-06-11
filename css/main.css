@@ -165,7 +165,7 @@ nav {
 }
 .home .caption p {
   font-size: 1rem;
-  color: var(--lightPurple);
+  color: #666;
 }
 .home .active .caption p {
   opacity: 0;
