@@ -124,4 +124,7 @@
     width: 270px;
     height: 270px;
   }
+  .social-icons a {
+    margin: 0 1rem;
+  }
 }
