@@ -113,7 +113,7 @@ i {
   color: rgb(102, 7, 102);
   font-weight: 700;
   letter-spacing: 2px;
-  margin: 0.8rem auto;
+  margin: 0.8rem 0;
   border: none;
   border-radius: 10px;
   box-shadow: -4px -4px 4px #fff, 4px 4px 4px #aaa;
