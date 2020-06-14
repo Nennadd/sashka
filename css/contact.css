@@ -49,6 +49,10 @@
   align-items: center;
   padding: 5rem 0;
 }
+.left-side {
+  opacity: 0;
+  transform: translateX(-200px);
+}
 form {
   display: grid;
   gap: 1rem;
