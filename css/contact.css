@@ -127,6 +127,7 @@ i {
   height: 3rem;
   box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa;
   opacity: 0;
+  transform: translateX(150px);
 }
 .email-box {
   width: 85%;
@@ -139,7 +140,7 @@ i {
   font-size: 0.85rem;
   color: var(--lightPurple);
 }
-.email-box-show {
+/* .email-box-show {
   opacity: 1;
   animation: box-width 1s ease;
   animation-fill-mode: backwards;
@@ -149,8 +150,8 @@ i {
   animation: box-width 1s ease;
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
-}
-@keyframes box-width {
+} */
+/* @keyframes box-width {
   0% {
     width: 0%;
     opacity: 0;
@@ -165,7 +166,7 @@ i {
     width: 85%;
     opacity: 1;
   }
-}
+} */
 .icons {
   display: flex;
   justify-content: center;
@@ -182,9 +183,10 @@ i {
   text-decoration: none;
   cursor: pointer;
   opacity: 0;
-  transition: all 0.2s ease;
+  /* transition: all 0.2s ease; */
+  transform: translateX(-150px);
 }
-.icon-show {
+/* .icon-show {
   opacity: 1;
   animation: buttons 2s ease;
   animation-delay: 1s;
@@ -199,7 +201,7 @@ i {
     transform: translateX(0) rotate(360deg);
     opacity: 1;
   }
-}
+} */
 .icon:active {
   box-shadow: inset 4px 4px 4px #aaa, inset -4px -4px 4px #fff;
 }
