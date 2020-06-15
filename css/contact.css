@@ -130,8 +130,6 @@ i {
   border-radius: 8px;
   height: 3rem;
   box-shadow: -3px -3px 4px #fff, 4px 4px 4px #aaa;
-  opacity: 0;
-  transform: translateX(150px);
 }
 .email-box {
   width: 85%;
@@ -244,6 +242,11 @@ i {
   }
 }
 @media screen and (min-width: 960px) {
+  .email-box,
+  .phone-box {
+    opacity: 0;
+    transform: translateX(150px);
+  }
 }
 @media screen and (max-width: 1199px) {
   .inputs {
