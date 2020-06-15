@@ -283,7 +283,14 @@ i {
     z-index: 9999;
   }
   input {
-    padding: 0.8rem 0.8rem 0.9rem 1.8rem;
+    padding: 0.9rem 0.8rem 0.9rem 1.8rem;
+    font-size: 1.05rem;
+  }
+  textarea {
+    font-size: 1.05rem;
+  }
+  .textarea-box .input-icon {
+    top: 1rem;
   }
   .contact form .form-btn {
     width: 60%;
