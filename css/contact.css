@@ -49,10 +49,6 @@
   align-items: center;
   padding: 5rem 0;
 }
-.left-side {
-  opacity: 0;
-  transform: translateX(-200px);
-}
 form {
   display: grid;
   gap: 1rem;
@@ -242,6 +238,10 @@ i {
   }
 }
 @media screen and (min-width: 960px) {
+  .left-side {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
   .email-box,
   .phone-box {
     opacity: 0;
