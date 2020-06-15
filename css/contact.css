@@ -70,7 +70,7 @@ textarea {
   width: 100%;
   color: rgb(98, 7, 98);
   border: none;
-  border-radius: 10px;
+  border-radius: 7px;
   background-color: #eaebf3;
   box-shadow: -3px -3px 3px #fff, 3px 3px 3px #aaa;
 }
@@ -187,7 +187,6 @@ i {
   text-decoration: none;
   cursor: pointer;
   opacity: 0;
-  /* transition: all 0.2s ease; */
   transform: translateX(-150px);
 }
 /* .icon-show {
@@ -244,6 +243,8 @@ i {
     border-bottom-color: purple;
   }
 }
+@media screen and (min-width: 960px) {
+}
 @media screen and (max-width: 1199px) {
   .inputs {
     grid-template-columns: 1fr;
@@ -253,6 +254,9 @@ i {
   .contact .contact-box {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
+  }
+  .contact form .form-btn {
+    margin: 0.8rem auto;
   }
   .right-side {
     padding: 1rem;
@@ -275,7 +279,9 @@ i {
     margin: 1rem auto 0;
     z-index: 9999;
   }
-
+  input {
+    padding: 0.8rem 0.8rem 0.9rem 1.8rem;
+  }
   .contact form .form-btn {
     width: 60%;
     padding: 0.7rem 0;
