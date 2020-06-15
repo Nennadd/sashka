@@ -396,6 +396,9 @@ nav {
     margin: 0 0 0 2.7rem;
     font-size: 1rem;
   }
+  .indicators {
+    display: none;
+  }
 }
 @media screen and (max-width: 800px) {
   .nav {
