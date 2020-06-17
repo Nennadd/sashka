@@ -353,40 +353,130 @@ formBtn.addEventListener("click", (e) => {
 });
 
 // NOTE SET ONSCROLL EVENTS !!! ***************************************8
-// const aboutImgContainer = document.querySelector(".img-container");
-// const rightBox = document.querySelector(".phone-box");
-// const leftBox = document.querySelector(".email-box");
-// const buttons = document.querySelectorAll(".icon");
-// const workCard1 = document.querySelector(".card1");
-// const workCard2 = document.querySelector(".card2");
-// const workCard3 = document.querySelector(".card3");
-// const workCard4 = document.querySelector(".card4");
-// const workCard5 = document.querySelector(".card5");
-// const workCard6 = document.querySelector(".card6");
-// function onScroll() {
-// let height = scrollY;
-// let width = innerWidth;
-// console.log(width);
-// if (height > 400) aboutImgContainer.classList.add("img-show");
-// if (height > 1000) {
-// workCard1.classList.add("card1-show");
-// workCard2.classList.add("card2-show");
-// workCard3.classList.add("card3-show");
-// }
-// if (height > 1400) {
-// workCard4.classList.add("card1-show");
-// workCard5.classList.add("card2-show");
-// workCard6.classList.add("card3-show");
-// }
-// if (height > 2050) leftBox.classList.add("email-box-show");
-// if (height > 2150) rightBox.classList.add("phone-box-show");
-//   if (height > 2250) {
-//     buttons.forEach((element) => {
-//       element.classList.add("icon-show");
-//     });
-//   }
-// }
-// window.addEventListener("scroll", onScroll);
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".img-container", {
+  scrollTrigger: {
+    trigger: ".img-container",
+    start: "top bottom-=100",
+    end: "center center+=100",
+    scrub: 1,
+  },
+  scale: 1,
+  opacity: 1,
+});
+gsap.to(".about-right", {
+  scrollTrigger: {
+    trigger: ".about-right",
+    start: "top bottom-=200",
+    end: "center center+=100",
+    scrub: 1,
+  },
+  opacity: 1,
+  y: 0,
+});
+gsap.to(".card1", {
+  scrollTrigger: {
+    trigger: ".card1",
+    start: "top center",
+    end: "top 100px",
+    scrub: 1,
+  },
+  delay: 1,
+  opacity: 1,
+  x: 0,
+});
+gsap.to(".card2", {
+  scrollTrigger: {
+    trigger: ".card2",
+    start: "top bottom",
+    end: "top 100px",
+    scrub: 1,
+  },
+  opacity: 1,
+});
+gsap.to(".card3", {
+  scrollTrigger: {
+    trigger: ".card3",
+    start: "top center",
+    end: "top 100px",
+    scrub: 1,
+  },
+  opacity: 1,
+  x: 0,
+});
+gsap.to(".card4", {
+  scrollTrigger: {
+    trigger: ".card4",
+    start: "top center",
+    end: "top 100px",
+    scrub: 1,
+  },
+  opacity: 1,
+  x: 0,
+});
+gsap.to(".card5", {
+  scrollTrigger: {
+    trigger: ".card5",
+    start: "top bottom",
+    end: "top 100px",
+    scrub: 1,
+  },
+  opacity: 1,
+});
+gsap.to(".card6", {
+  scrollTrigger: {
+    trigger: ".card6",
+    start: "top center",
+    end: "top 100px",
+    scrub: 1,
+  },
+  opacity: 1,
+  x: 0,
+});
+gsap.to(".left-side", {
+  scrollTrigger: {
+    trigger: ".left-side",
+    start: "top center",
+    end: "top 200px",
+    scrub: 1,
+  },
+  opacity: 1,
+  x: 0,
+});
+gsap.to(".email-box", {
+  scrollTrigger: {
+    trigger: ".email-box",
+    start: "top 90%",
+    end: "top 70%",
+    scrub: 1,
+  },
+  opacity: 1,
+  x: 0,
+});
+gsap.to(".phone-box", {
+  scrollTrigger: {
+    trigger: ".phone-box",
+    start: "top 90%",
+    end: "top 80%",
+    scrub: 1,
+  },
+  opacity: 1,
+  x: 0,
+});
+gsap.to(".icon", {
+  scrollTrigger: {
+    trigger: ".icon",
+    start: "top bottom-=100",
+    end: "top 85%",
+    scrub: 1,
+  },
+  duration: 2,
+  opacity: 1,
+  x: 0,
+  stagger: 0.7,
+  rotation: 360,
+});
 
 function renderSpots() {
   removeInterval();
