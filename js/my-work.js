@@ -35,6 +35,8 @@ const myWork = [
       "images/work/logos/zoe/zoe02.jpg",
       "images/work/logos/zoe/zoe03.jpg",
       "images/work/logos/zoe/zoe04.jpg",
+      "images/work/logos/zoe/zoe05.jpg",
+      "images/work/logos/zoe/zoe06.jpg",
     ],
   },
   {
@@ -45,6 +47,9 @@ const myWork = [
       "images/work/logos/mediceva/med1.jpg",
       "images/work/logos/mediceva/med2.jpg",
       "images/work/logos/mediceva/med3.jpg",
+      "images/work/logos/mediceva/med04.jpg",
+      "images/work/logos/mediceva/med05.jpg",
+      "images/work/logos/mediceva/med06.jpg",
     ],
   },
   {
@@ -55,6 +60,9 @@ const myWork = [
       "images/work/logos/pet/pet01.jpg",
       "images/work/logos/pet/pet02.jpg",
       "images/work/logos/pet/pet03.jpg",
+      "images/work/logos/pet/pet04.jpg",
+      "images/work/logos/pet/pet05.jpg",
+      "images/work/logos/pet/pet06.jpg",
     ],
   },
   {
@@ -67,6 +75,7 @@ const myWork = [
       "images/work/logos/web/web03.jpg",
       "images/work/logos/web/web04.jpg",
       "images/work/logos/web/web05.jpg",
+      "images/work/logos/web/web06.jpg",
     ],
   },
   {
@@ -77,6 +86,9 @@ const myWork = [
       "images/work/logos/zaz/zaz01.jpg",
       "images/work/logos/zaz/zaz02.jpg",
       "images/work/logos/zaz/zaz03.jpg",
+      "images/work/logos/zaz/zaz04.jpg",
+      "images/work/logos/zaz/zaz05.jpg",
+      "images/work/logos/zaz/zaz06.jpg",
     ],
   },
   {
@@ -87,6 +99,9 @@ const myWork = [
       "images/work/logos/team/team01.jpg",
       "images/work/logos/team/team02.jpg",
       "images/work/logos/team/team03.jpg",
+      "images/work/logos/team/team04.jpg",
+      "images/work/logos/team/team05.jpg",
+      "images/work/logos/team/team06.jpg",
     ],
   },
   {
@@ -98,6 +113,8 @@ const myWork = [
       "images/work/logos/craft/craft02.jpg",
       "images/work/logos/craft/craft03.jpg",
       "images/work/logos/craft/craft04.jpg",
+      "images/work/logos/craft/craft05.jpg",
+      "images/work/logos/craft/craft06.jpg",
     ],
   },
   {
@@ -108,6 +125,9 @@ const myWork = [
       "images/work/logos/vel/vel01.jpg",
       "images/work/logos/vel/vel02.jpg",
       "images/work/logos/vel/vel03.jpg",
+      "images/work/logos/vel/vel04.jpg",
+      "images/work/logos/vel/vel05.jpg",
+      "images/work/logos/vel/vel06.jpg",
     ],
   },
   {
@@ -137,6 +157,8 @@ const myWork = [
       "images/work/illustrations/majice/beli03.jpg",
       "images/work/illustrations/majice/beli04.jpg",
       "images/work/illustrations/majice/beli05.jpg",
+      "images/work/illustrations/majice/beli06.jpg",
+      "images/work/illustrations/majice/beli07.jpg",
     ],
   },
   {
