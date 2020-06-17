@@ -5,7 +5,6 @@ const myWork = [
     thumbnail: "images/work/logos/saulina/saulina-thumb.jpg",
     images: [
       "images/work/logos/saulina/saulina1.jpg",
-      "images/work/logos/saulina/saulina2.jpg",
       "images/work/logos/saulina/saulina3.jpg",
       "images/work/logos/saulina/saulina4.jpg",
       "images/work/logos/saulina/saulina5.jpg",
@@ -252,6 +251,10 @@ const myWork = [
     images: [
       "images/work/brochures/brosura1/brosura01.jpg",
       "images/work/brochures/brosura1/brosura02.jpg",
+      "images/work/brochures/brosura1/brosura03.jpg",
+      "images/work/brochures/brosura1/brosura04.jpg",
+      "images/work/brochures/brosura1/brosura05.jpg",
+      "images/work/brochures/brosura1/brosura06.jpg",
     ],
   },
   {
@@ -263,11 +266,13 @@ const myWork = [
       "images/work/social-networks/im/im02.jpg",
       "images/work/social-networks/im/im03.jpg",
       "images/work/social-networks/im/im04.jpg",
+      "images/work/social-networks/im/im05.jpg",
+      "images/work/social-networks/im/im06.jpg",
     ],
   },
   {
     category: "social-networks",
-    description: "Computer Land",
+    description: "Maestro",
     thumbnail: "images/work/social-networks/comp/comp-thumb.jpg",
     images: [
       "images/work/social-networks/comp/comp01.jpg",
@@ -275,6 +280,20 @@ const myWork = [
       "images/work/social-networks/comp/comp03.jpg",
       "images/work/social-networks/comp/comp04.jpg",
       "images/work/social-networks/comp/comp05.jpg",
+      "images/work/social-networks/comp/comp06.jpg",
+    ],
+  },
+  {
+    category: "social-networks",
+    description: "Computer Land",
+    thumbnail: "images/work/social-networks/maestro/maestro03.jpg",
+    images: [
+      "images/work/social-networks/maestro/maestro01.jpg",
+      "images/work/social-networks/maestro/maestro02.jpg",
+      "images/work/social-networks/maestro/maestro03.jpg",
+      "images/work/social-networks/maestro/maestro04.jpg",
+      "images/work/social-networks/maestro/maestro05.jpg",
+      "images/work/social-networks/maestro/maestro06.jpg",
     ],
   },
   {
@@ -287,6 +306,7 @@ const myWork = [
       "images/work/social-networks/comono/comono03.jpg",
       "images/work/social-networks/comono/comono04.jpg",
       "images/work/social-networks/comono/comono05.jpg",
+      "images/work/social-networks/comono/comono06.jpg",
     ],
   },
 ];
