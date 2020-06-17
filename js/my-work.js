@@ -245,6 +245,19 @@ const myWork = [
     ],
   },
   {
+    category: "mockups",
+    description: "Pekara",
+    thumbnail: "images/work/mockups/pekara/pekara-thumb.jpg",
+    images: [
+      "images/work/mockups/pekara/pekara01.jpg",
+      "images/work/mockups/pekara/pekara02.jpg",
+      "images/work/mockups/pekara/pekara03.jpg",
+      "images/work/mockups/pekara/pekara04.jpg",
+      "images/work/mockups/pekara/pekara05.jpg",
+      "images/work/mockups/pekara/pekara06.jpg",
+    ],
+  },
+  {
     category: "brochures",
     description: "Brochure 1",
     thumbnail: "images/work/brochures/brosura1/brosura-thumb.jpg",
@@ -272,7 +285,7 @@ const myWork = [
   },
   {
     category: "social-networks",
-    description: "Maestro",
+    description: "Computer Land",
     thumbnail: "images/work/social-networks/comp/comp-thumb.jpg",
     images: [
       "images/work/social-networks/comp/comp01.jpg",
@@ -285,8 +298,8 @@ const myWork = [
   },
   {
     category: "social-networks",
-    description: "Computer Land",
-    thumbnail: "images/work/social-networks/maestro/maestro03.jpg",
+    description: "Maestro",
+    thumbnail: "images/work/social-networks/maestro/maestro-thumb.jpg",
     images: [
       "images/work/social-networks/maestro/maestro01.jpg",
       "images/work/social-networks/maestro/maestro02.jpg",
