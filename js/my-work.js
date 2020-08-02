@@ -1,4 +1,4 @@
-const myWork = [
+export let myWork = [
   {
     category: "logo",
     description: "Shaulina",

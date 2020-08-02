@@ -1,3 +1,5 @@
+import { myWork } from "./my-work.js";
+
 const LOADER = document.querySelector(".loader-container");
 window.addEventListener("load", () => {
   LOADER.style.display = "none";
@@ -140,7 +142,7 @@ function resetTimer() {
 }
 
 // NOTE MY WORK !!!  *********************************************
-modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal");
 const workButtons = document.querySelectorAll(".work-btn");
 workButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -199,7 +201,7 @@ function renderGallery(e) {
           }
         }
         imgDiv.className = "gallery-img";
-        galleryImg = document.createElement("img");
+        const galleryImg = document.createElement("img");
         galleryImg.setAttribute("src", image);
         galleryImg.addEventListener("click", showGalleryImage);
         // galleryContainer.prepend(description);
@@ -229,7 +231,7 @@ function showFirstGallery(category) {
       }
     }
     imgDiv.className = "gallery-img";
-    galleryImg = document.createElement("img");
+    const galleryImg = document.createElement("img");
     galleryImg.setAttribute("src", image);
     galleryImg.addEventListener("click", showGalleryImage);
     imgDiv.append(galleryImg);
@@ -480,7 +482,7 @@ gsap.to(".icon", {
 
 function renderSpots() {
   removeInterval();
-  galleryModal = document.querySelector(".gallery-modal");
+  let galleryModal = document.querySelector(".gallery-modal");
   let spot = document.createElement("span");
   spot.className = "spot";
   let spotTop = Math.floor(Math.random() * 100);
