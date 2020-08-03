@@ -170,7 +170,7 @@ nav {
 .home .caption p {
   font-size: 1.3rem;
   color: var(--lightPurple);
-  margin: 0.5rem 0 0 1rem;
+  margin: 1rem 0 0 1rem;
 }
 .home .active .caption p {
   opacity: 0;
