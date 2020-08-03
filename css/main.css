@@ -120,13 +120,13 @@ nav {
   animation: slide 1s ease;
 }
 .home .slide1 {
-  background-image: url("../images/ja.png");
+  background-image: url("../images/alex1.png");
 }
 .home .slide2 {
-  background-image: url("../images/02Girl.png");
+  background-image: url("../images/alex2.png");
 }
 .home .slide3 {
-  background-image: url("../images/03Girl.png");
+  background-image: url("../images/alex3.png");
 }
 .home .active {
   display: flex;
@@ -143,7 +143,7 @@ nav {
 }
 .container {
   position: absolute;
-  bottom: 7rem;
+  bottom: 12rem;
   max-width: 30%;
   margin: 0 0 0 8rem;
 }
@@ -154,10 +154,13 @@ nav {
   width: 100%;
 }
 .home .caption h1 {
-  font-size: 2.5rem;
+  display: inline-block;
+  font-size: 4.5rem;
+  line-height: 4.5rem;
   text-align: unset;
   color: var(--darkPurple);
   margin: 0;
+  border-bottom: 3px solid purple;
 }
 .home .active .caption h1 {
   opacity: 0;
@@ -165,8 +168,9 @@ nav {
   animation-delay: 1s;
 }
 .home .caption p {
-  font-size: 1rem;
-  color: #666;
+  font-size: 1.3rem;
+  color: var(--lightPurple);
+  margin: 0.5rem 0 0 1rem;
 }
 .home .active .caption p {
   opacity: 0;
@@ -423,7 +427,7 @@ nav {
     height: 20rem;
   }
   .home .slide {
-    background-position: bottom;
+    background-position: top;
   }
   .container {
     top: 6rem;
@@ -434,15 +438,6 @@ nav {
   }
   .home .caption h1 {
     font-size: 2rem;
-  }
-  .home .slide1 {
-    background-image: url("../images/ja.png");
-  }
-  .home .slide2 {
-    background-image: url("../images/girl2.png");
-  }
-  .home .slide3 {
-    background-image: url("../images/girl3.png");
   }
 }
 @media screen and (max-width: 400px) {
