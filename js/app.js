@@ -110,7 +110,10 @@ function changeSlide() {
     let circle = document.createElement("div");
     circle.textContent = i + 1;
     circle.id = i;
-    circle.setAttribute("onclick", "indicateSlides(this)");
+    // circle.setAttribute("onclick", "indicateSlides(this)");
+    circle.addEventListener("click", (e) => {
+      indicateSlides(e.target.id);
+    });
     if (i === 0) circle.className = "active-circle";
 
     indicators.appendChild(circle);
@@ -124,7 +127,7 @@ function updateIndicators() {
   indicators.children[index].classList.add("active-circle");
 }
 function indicateSlides(element) {
-  index = +element.id;
+  index = +element;
   changeSlide();
   updateIndicators();
 }
